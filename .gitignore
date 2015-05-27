@@ -1,0 +1,41 @@
+# -- Editores -----------------------------------------
+# sublimetext
+/*.sublime-project
+*.sublime-workspace
+*.TODO
+
+# -- Sistemas Operativos ------------------------------
+# Windows
+Thumbs.db
+ehthumbs.db
+Desktop.ini
+$RECYCLE.BIN/
+
+# Linux
+.*
+!.gitignore
+!.htaccess
+*~
+
+# Mac OS X
+.DS_Store
+.AppleDouble
+.LSOverride
+Icon
+._*
+.Spotlight-V100
+.Trashes
+
+# -- Windows Installer files ------------------------------
+*.cab
+*.msi
+*.msm
+*.msp
+
+# -- Prepros ------------------------------
+*.cfg
+prepros.cfg
+
+# -- Files that might appear on external disk ------------------------------
+.Spotlight-V100
+.Trashes
