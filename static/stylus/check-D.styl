@@ -1,0 +1,24 @@
+//ESTILO-B
+.label-check--B
+	&::before//estilos del recuadro(☐) que tapa del check cuando .check-B esta desmarcado
+		background white
+		border-radius .125em
+		transition all .3s ease-in-out
+
+	&:checked::before//estilos del recuadro(☐) que tapa del check cuando .check-B esta marcado
+		background #42A5F5
+		box-shadow 0 1px 3px rgba(0,0,0,0.12), 0 1px 2px rgba(0,0,0,0.24)
+
+	&::after//estilos del check[✔] cuando .check-B esta desmarcado
+		border solid .125em #BBDEFB
+		transition all .1s ease-in-out .35s
+
+	&:checked::after//estilos del check[✔] cuando .check-B esta marcado
+		border-color white
+		border-right none
+		border-top none
+		height .25em
+		left .15em
+		top .25em
+		transform rotate(-45deg)
+		width .65em
