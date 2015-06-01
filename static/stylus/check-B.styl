@@ -1,0 +1,41 @@
+//ESTILO-B
+.check-B
+	cursor pointer
+	margin 0 1em 0 0
+	position relative
+	top -.125em//2px
+
+	&__background
+		background white
+		border-radius .125em
+		cursor pointer
+		height 1.2em
+		left 0
+		position absolute
+		top 0
+		transition all .3s ease-in-out
+		width 1.2em
+
+	&:checked + .check-B__background
+		background #42A5F5
+		box-shadow 0 1px 3px rgba(0,0,0,0.12), 0 1px 2px rgba(0,0,0,0.24)
+
+	&__unchecked
+		border solid .125em #BBDEFB //2px
+		height 1.075em
+		left 0
+		position absolute
+		top -.0625em
+		transition border-bottom .1s ease-in-out .3s, border-left .1s ease-in-out .4s
+		width 1.075em
+		z-index 1
+
+	&:checked + .check-B__background + .check-B__unchecked //propiedades del check cuando esta marcaddo
+		border-color white
+		border-right none
+		border-top none
+		height .3em
+		left .15em
+		top .3em
+		transform rotate(-45deg)
+		width .8em

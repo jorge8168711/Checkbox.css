@@ -1,0 +1,34 @@
+//ESTILO-A
+.check-A
+	cursor pointer
+	margin 0 1em 0 0
+	position relative
+	top -.125em//2px
+
+	&__background
+		background white
+		cursor pointer
+		height 1.2em
+		left 0
+		position absolute
+		top 0
+		width 1.2em
+
+	&__unchecked
+		border solid .125em #BBDEFB //2px
+		height 1.075em
+		left 0
+		position absolute
+		top -.0625em
+		transition all .3s ease-in-out
+		width 1.075em
+		z-index 1
+
+	&:checked + .check-A__background + .check-A__unchecked //propiedades del check cuando esta marcaddo
+		border-color #42A5F5
+		border-right none
+		border-top none
+		height .5em
+		top .1em
+		transform rotate(-45deg)
+		width 1.1em

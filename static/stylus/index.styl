@@ -1,64 +1,39 @@
-@import 'normalize'
+@import 'normalize-v3.0.3-ROBOTO'
 
+//CONTENEDOR Y MODIFICADORES
 .wrapper
 	background white
-	border-radius .125em
+	border-radius .125em//2px
 	box-shadow 0 1px 3px rgba(0,0,0,0.12), 0 1px 2px rgba(0,0,0,0.24)
+	display inline-block
 	height 150px
 	margin 1em
 	padding .5em
 	width 160px
 
+.w-blue
+	background yellow
+
+//LISTA DE CHECKS
 .list-of-checkbox
 	list-style-type none
 	margin 0
 	padding 0
 
 	&__item
-		margin .25em
-		padding .25em
+		margin 4% auto
+		padding 4%
+		width 92%
 
-		&__label
-			color #333
-			cursor pointer
-			display block
-			font-weight 400
-			height 1.2em
-			margin .5em
-			position relative
+//PROPIEDADES DE LOS LABELS
+.label
+	color #333
+	cursor pointer
+	display block
+	font-weight 400
+	height 1.2em
+	position relative
+	width 100%
 
-		&__check
-			cursor pointer
-			margin 0 1em 0 0
-			position relative
-			top -.125em
-
-			&::after
-				background white
-				content ''
-				cursor pointer
-				height 1.2em
-				left 0
-				position absolute
-				top 0
-				width 1.2em
-
-			&::before
-				border solid .125em #FFCDD2
-				content ''
-				height 1.075em
-				left 0
-				position absolute
-				top -.0625em
-				transition all .3s ease-in-out
-				width 1.075em
-				z-index 1
-
-			&:checked::before
-				border-color #F44336
-				border-right none
-				border-top none
-				height .5em
-				top .1em
-				transform rotate(-45deg)
-				width 1.1em
+@import 'check-A'
+@import 'check-B'
