@@ -29,30 +29,29 @@
 	width 100%
 
 	&__check //DEFINE LAS PROPIEDADES DE POSICIONAMIENTO, ALTO Y ANCHO DE TODOS LOS CHECKBOX
+		// -moz-appearance none
+		// -ms-appearance none
+		// -o-appearance none
+		// -webkit-appearance none
 		cursor pointer
 		display block
+		height 1.1em
 		left 0
 		outline none
 		position absolute
 		top 0
+		width 1.1em
 
 		&::before
+		&::after
+			box-sizing border-box
 			content ''
 			cursor pointer
-			height 1.1em
+			height 100%
 			left 0
 			position absolute
 			top 0
-			width 1.1em
-
-		&::after
-			content ''
-			height .95em
-			left 0
-			position absolute
-			top 0
-			width .95em
-			z-index 1
+			width 100%
 
 	&__text
 		display inline-block
