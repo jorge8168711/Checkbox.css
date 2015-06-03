@@ -1,2 +1,3 @@
 # Checkbox.css
-Conjunto de checkoxes creados con css
+
+-Conjunto de checkoxes creados con CSS
