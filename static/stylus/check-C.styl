@@ -1,13 +1,13 @@
 //ESTILO-C
 .label-check--C
 	&::before//estilos del recuadro(☐) que tapa del check cuando .check-C esta desmarcado
-		background lighten(#BBDEFB, 50%)
+		background unchecked-color //Variable en shadows.styl
 		border-radius .125em
 		transition background .3s ease-in-out
 
 	&:checked::before//estilos del recuadro(☐) que tapa del check cuando .check-C esta marcado
-		background #42A5F5
-		box-shadow 0 1px 3px rgba(0,0,0,0.12), 0 1px 2px rgba(0,0,0,0.24)
+		background checked-color //Variable en shadows.styl
+		box-shadow z-depth-1 //Variable en shadows.styl
 
 	&::after//estilos del check[✔] cuando .check-C esta desmarcado
 		border solid .125em white
@@ -17,5 +17,5 @@
 		left 24%
 		top 30%
 		transform rotate(-45deg)
-		transition all .1s ease-in-out .35s
+		transition all .1s ease-in-out .3s
 		width 52%

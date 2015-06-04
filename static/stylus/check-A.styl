@@ -4,11 +4,11 @@
 		background white
 
 	&::after//estilos del check[✔] cuando .check-A esta desmarcado
-		border solid .125em #BBDEFB
+		border solid .125em unchecked-color //Variable en shadows.styl
 		transition all .3s ease-in-out
 
 	&:checked::after//estilos del check[✔] cuando .check-A esta marcado
-		border-color #42A5F5
+		border-color checked-color //Variable en shadows.styl
 		border-right none
 		border-top none
 		height 50%
