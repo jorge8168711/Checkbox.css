@@ -1,12 +1,18 @@
 @import 'normalize-v3.0.3-ROBOTO'
 
+//ESTILOS DE LOS CONTENEDORES GENERALES
+.chrome
+.all-navigators
+	width 80%
+	margin 2em auto
+
 //CONTENEDOR LISTA DE CHECKBOX
 .list-of-checkbox
 	background white
 	border-radius .125em
 	box-shadow 0 1px 3px rgba(0,0,0,0.12), 0 1px 2px rgba(0,0,0,0.24)
 	display inline-block
-	font-size 1rem //ESTE VALOR DEFINE EL TAMAÑO DE LOS ELEMENTOS
+	font-size 1.2rem //ESTE VALOR DEFINE EL TAMAÑO DE LOS ELEMENTOS
 	height auto
 	list-style-type none
 	margin .5em
@@ -51,15 +57,31 @@
 			left 0
 			position absolute
 			top 0
-			width 100%
+			width 1.1em
 
 	&__text
 		display inline-block
 		margin-left 2.2em
 		width 100%
 
+	/.check
+		-moz-appearance none
+		-ms-appearance none
+		-o-appearance none
+		-webkit-appearance none
+		box-sizing border-box
+		cursor pointer
+		display block
+		height 1.1em
+		left 0
+		outline none
+		position absolute
+		top 0
+		width 1.1em
+
 //IMPORTS DE LOS ESTILOS DE CADA TIPO DE CHECKBOX
 @import 'check-A'
 @import 'check-B'
 @import 'check-C'
 @import 'check-D'
+@import './all-navigators/check-AA'

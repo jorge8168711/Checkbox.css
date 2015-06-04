@@ -1,0 +1,16 @@
+//ESTILO-A
+.check-A//estilos del recuadro(☐) que tapa el check cuando .check-A esta desmarcado
+	&__background
+		background white
+
+	&__unchecked//estilos del check[✔] cuando .check-A esta desmarcado
+		border solid .125em #BBDEFB
+		transition all .3s ease-in-out
+
+	&:checked + .check-A__background + .check-A__unchecked //propiedades del check cuando esta marcaddo//estilos del check[✔] cuando .check-A esta marcado
+		border-color #42A5F5
+		border-right none
+		border-top none
+		height 0.55em
+		transform rotate(-45deg)
+		width 0.99em
