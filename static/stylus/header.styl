@@ -57,25 +57,38 @@
             position relative
             text-align center
             text-decoration none
-            width 170px
+            width auto
 
-            // &:nth-child(1)::before
-            //     content 'a'
+            &:nth-child(1)::before
+            &:nth-child(3)::after
+                -moz-osx-font-smoothing: grayscale;
+                -webkit-font-smoothing: antialiased;
+                content '\e600'
+                font-family 'icomoon'
+                font-size 1rem
+                position absolute
+
+            &:nth-child(1)::before
+                left -.4rem
+                top 0
 
             &:nth-child(2)
                 color checked-color
                 opacity 0
                 width 100px
 
+            &:nth-child(3)::after
+                right -.4rem
+                top 0
+
 @media screen and (max-width: 520px)
     .nav__item
         font-size 1.1rem
         padding 0
         text-align center
-        width 35%
 
         &:nth-child(2)
-            width 20%
+            width 30%
 
 @media screen and (max-width: 480px)
     .header
@@ -88,19 +101,19 @@
             box-shadow z-depth-2
 
     .nav
-        height 3em
+        height 2.5em
         top 100px
 
         &__item
-            margin-top 1.7em
+            margin-top 1.2em
 
             &:nth-child(1)
-                padding-left .5em
+                padding-left .7em
                 text-align right
 
             &:nth-child(2)
                 width 10%
 
             &:nth-child(3)
-                padding-right .5em
+                padding-right .7em
                 text-align left
