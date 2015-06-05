@@ -1,0 +1,25 @@
+//ESTILO-D
+.check-D
+	&__background//estilos del recuadro(☐) que tapa del check cuando .check-D esta desmarcado
+		background white
+		border solid .125em unchecked-color //Variable en shadows.styl
+		border-radius .125em
+		transition border .3s ease-in-out
+
+	&:checked + .check-D__background//estilos del recuadro(☐) que tapa del check cuando .check-D esta marcado
+		border-color checked-color //Variable en shadows.styl
+		box-shadow z-depth-1 //Variable en shadows.styl
+
+	&__unchecked//estilos del check[✔] cuando .check-D esta desmarcado
+		border solid .125em unchecked-color //Variable en shadows.styl
+		border-right none
+		border-top none
+		height 0.275em
+		left 0.264em
+		top 0.33em
+		transform rotate(-45deg)
+		transition border-left .1s ease-in-out .3s, border-bottom .1s ease-in-out .4s
+		width 0.572em
+
+	&:checked + .check-D__background + .check-D__unchecked//estilos del check[✔] cuando .check-D esta marcado
+		border-color checked-color //Variable en shadows.styl
