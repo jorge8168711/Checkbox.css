@@ -30,17 +30,17 @@
 		width 95%
 
 .sections-title
-	background rgba(white, .8)
-	border-bottom solid 1px lighten(secondary-text-color, 70%)
+	background checked-color
 	border-radius 0.125em 0.125em 0 0
-	color secondary-text-color
-	display inline-block
-	font-size 1.4rem
+	box-shadow z-depth-1
+	color white
+	display block
+	font-size 1.3rem
 	font-weight 100
-	height 1.5em
-	line-height 1.5em
-	margin 0 .5em 0 0
-	padding 0
+	height auto
+	line-height 1.3em
+	margin 0 0 .5em 0
+	padding .1em 0
 	width 100%
 
 //CONTENEDOR LISTA DE CHECKBOX
@@ -73,7 +73,6 @@
 	width 100%
 
 	&__check //DEFINE LAS PROPIEDADES DE POSICIONAMIENTO, ALTO Y ANCHO DE TODOS LOS CHECKBOX
-		-moz-appearance none
 		-ms-appearance none
 		-o-appearance none
 		-webkit-appearance none
@@ -103,7 +102,6 @@
 		width 100%
 
 	/.check
-		-moz-appearance none
 		-ms-appearance none
 		-o-appearance none
 		-webkit-appearance none
@@ -118,11 +116,11 @@
 		width 1.1em
 
 //IMPORTS DE LOS ESTILOS DE CADA TIPO DE CHECKBOX
-@import 'check-A'
-@import 'check-B'
-@import 'check-C'
-@import 'check-D'
-@import './all-navigators/check-AA'
-@import './all-navigators/check-BB'
-@import './all-navigators/check-CC'
-@import './all-navigators/check-DD'
+@import 'google-opera-checks/check-A'
+@import 'google-opera-checks/check-B'
+@import 'google-opera-checks/check-C'
+@import 'google-opera-checks/check-D'
+@import 'all-navigators-checks/check-AA'
+@import 'all-navigators-checks/check-BB'
+@import 'all-navigators-checks/check-CC'
+@import 'all-navigators-checks/check-DD'

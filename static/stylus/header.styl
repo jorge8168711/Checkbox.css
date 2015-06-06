@@ -79,6 +79,7 @@
 
             &:nth-child(2)
                 color checked-color
+                cursor auto
                 opacity 0
                 width 100px
 
@@ -113,12 +114,16 @@
             margin-top 1.2em
 
             &:nth-child(1)
-                padding-left .7em
+                padding-left .5em
                 text-align right
 
             &:nth-child(2)
-                width 10%
+                width 25%
 
             &:nth-child(3)
-                padding-right .7em
+                padding-right .5em
                 text-align left
+
+            &:nth-child(1)::before
+            &:nth-child(3)::after
+                font-size .9rem
