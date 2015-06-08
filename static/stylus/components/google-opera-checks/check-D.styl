@@ -1,0 +1,37 @@
+/**
+ * CONTENIDO
+ *
+ * BLOQUES
+ * check-D.......Bloque check-D
+		  check-D:before: Fondo de los checks.
+		  check-D::after: Checkbox animado creado con css.
+ *
+ */
+
+ /*------------------------------------*\
+    CHECK-D
+\*------------------------------------*/
+.label-check--D
+	&::before //recuadro ☐  que tapa el input de tipo checkbox cuando el input esta desmarcado
+		background-color white
+		border solid .125em unchecked-color //Var en shadows.styl
+		border-radius .125em
+		transition border .3s ease-in-out
+
+	&:checked::before //recuadro ☐  que tapa el input de tipo checkbox cuando el input esta marcado
+		border-color checked-color //Var en shadows.styl
+		box-shadow z-depth-1 //Var en shadows.styl
+
+	&::after //checkbox animado ✔ cuando el input esta desmarcado
+		border solid .125em unchecked-color //Var en shadows.styl
+		border-right none
+		border-top none
+		height 24%
+		left 24%
+		top 36%
+		transform rotate(-45deg)
+		transition border-left .1s ease-in-out .3s, border-bottom .1s ease-in-out .4s
+		width 52%
+
+	&:checked::after //checkbox animado ✔ cuando el input esta marcado
+		border-color checked-color //Var en shadows.styl

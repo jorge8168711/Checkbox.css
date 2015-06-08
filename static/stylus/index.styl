@@ -1,126 +1,155 @@
-@import 'normalize-v3.0.3-ROBOTO'
-@import 'variables'
-@import 'header'
+/**
+ * DESCRIPCIÓN DE LA ESTRUCTURA DEL PROYECTO
+ *
+ * Orden del código
+ *      1. Normalize - normalize en el formato de stylus.
+ *      2. Variables - Variables de color y sombras.
+ *      2. Utilidades - patrones de diseño genéricos.
+ *      3. Componentes – Componentes construídos a partir de objetos
+ *         y sus extensiones.
+ *
+ * Convenciones para los nombres de las clases
+ *      BEM es una metodología para nombrar y clasificar selectores
+ *      CSS de manera que los hacemos más estrictos, transparentes e
+ *      informativos.
+ *
+ *          La convención de nombre sigue este patrón:
+ *
+ *         .bloque{}
+ *         .bloque__elemento{}
+ *         .bloque--modificador{}
+
+ * CONTENIDOS
+ *
+ * IMPORTS
+ * Variables.............Variables de color sombras.
+ * Normalize.styl........Normalize en formato .styl
+ * Utilidades............Estilos que se aplicn a cualquier elemento.
+ * Header................Estilos del header y sus partes.
+ * font-face.............Imports de los iconfonts.
+ *
+ * BLOQUES
+ * list.............Listas de checks.
+ *     list__item: Items de la lista.
+
+ * label............Checks compatibles con chrome y opera.
+       label__check: Posicionamiento alto y ancho de los input de tipo checkbox chrome y opera.
+       label__check::before/after: Estilos base de los pseudoelementos.
+       label__text: Texto dentro de cada label.
+
+ * check............Posicionamiento alto y ancho de los input de tipo checkbox todos los navegadores.
+ *
+ * IMPORTS DE ESTILOS CHECKS
+ * Imports.........Estilos independientes de cada tipo de check.
+ */
+
+/*------------------------------------*\
+    IMPORTS
+\*------------------------------------*/
+@import 'tools/variables'
+@import 'tools/normalize-v3.0.3-ROBOTO'
+@import 'components/utilities'
+@import 'components/header'
 
 @font-face {
-	font-family: 'icomoon';
-	src:url('../fonts/icomoon.eot?-77glzp');
-	src:url('../fonts/icomoon.eot?#iefix-77glzp') format('embedded-opentype'),
-		url('../fonts/icomoon.ttf?-77glzp') format('truetype'),
-		url('../fonts/icomoon.woff?-77glzp') format('woff'),
-		url('../fonts/icomoon.svg?-77glzp#icomoon') format('svg');
-	font-weight: normal;
-	font-style: normal;
+    font-family: 'icomoon';
+    src:url('../fonts/icomoon.eot?-77glzp');
+    src:url('../fonts/icomoon.eot?#iefix-77glzp') format('embedded-opentype'),
+        url('../fonts/icomoon.ttf?-77glzp') format('truetype'),
+        url('../fonts/icomoon.woff?-77glzp') format('woff'),
+        url('../fonts/icomoon.svg?-77glzp#icomoon') format('svg');
+    font-weight: normal;
+    font-style: normal;
 }
 
-//ESTILOS DE LOS CONTENEDORES GENERALES
-.chrome
-.all-navigators
-	background lighten(divider-color, 85%)
-	border-radius 0.125em
-	box-shadow z-depth-2
-	margin 4em auto
-	position relative
-	text-align center
-	width 740px
+/*------------------------------------*\
+    LIST
+\*------------------------------------*/
+.list
+    background-color white
+    border-radius .125em //2px
+    box-shadow z-depth-1 //var en shadows.styl
+    display inline-block
+    font-size 1.1rem //Define el tamaño de todo los elementos
+    height auto
+    list-style-type none
+    margin .5em
+    padding .25em
+    text-align left
+    width 8em //Define el ancho de los elementos interiores
 
-@media screen and (max-width 760px)
-	.chrome
-	.all-navigators
-		width 95%
+    &__item
+        margin .25em 0
+        padding .25em 4%
+        width 92%
 
-.sections-title
-	background checked-color
-	border-radius 0.125em 0.125em 0 0
-	box-shadow z-depth-1
-	color white
-	display block
-	font-size 1.3rem
-	font-weight 100
-	height auto
-	line-height 1.3em
-	margin 0 0 .5em 0
-	padding .1em 0
-	width 100%
-
-//CONTENEDOR LISTA DE CHECKBOX
-.list-of-checkbox
-	background white
-	border-radius .125em
-	box-shadow z-depth-1 //Variable en shadows.styl
-	display inline-block
-	font-size 1.1rem //ESTE VALOR DEFINE EL TAMAÑO DE LOS ELEMENTOS
-	height auto
-	list-style-type none
-	margin .5em
-	padding .25em
-	text-align left
-	width 8em //ESTE VALOR DEFINE EL ANCHO DE LOS ELEMENTOS INTERIORES
-
-	&__item
-		margin .25em 0
-		padding .25em 4%
-		width 92%
-
-//PROPIEDADES DE LABELS Y CHECKBOX
+/*------------------------------------*\
+    LABEL
+\*------------------------------------*/
 .label
-	color secondary-text-color //Variable en shadows.styl
-	cursor pointer
-	display block
-	font-weight 400
-	height 1.2em
-	position relative
-	width 100%
+    color secondary-text-color //Var en shadows.styl
+    cursor pointer
+    display block
+    font-weight 400
+    height 1.1em
+    position relative
+    width 1.1em
 
-	&__check //DEFINE LAS PROPIEDADES DE POSICIONAMIENTO, ALTO Y ANCHO DE TODOS LOS CHECKBOX
-		-ms-appearance none
-		-o-appearance none
-		-webkit-appearance none
-		cursor pointer
-		display block
-		height 1.1em
-		left 0
-		outline none
-		position absolute
-		top 0
-		width 1.1em
+    &__check
+        -ms-appearance none
+        -o-appearance none
+        -webkit-appearance none
+        cursor pointer
+        display block
+        height 1.1em
+        left 0
+        outline none
+        position absolute
+        top 0
+        width 1.1em
 
-		&::before
-		&::after
-			box-sizing border-box
-			content ''
-			cursor pointer
-			height 100%
-			left 0
-			position absolute
-			top 0
-			width 1.1em
+        &::before
+        &::after
+            box-sizing border-box
+            content ''
+            cursor pointer
+            height 1.1em
+            left 0
+            position absolute
+            top 0
+            width 1.1em
 
-	&__text
-		display inline-block
-		margin-left 2.2em
-		width 100%
+    &__text
+        display inline-block
+        margin-left 2.2em
+        width 100%
 
-	/.check
-		-ms-appearance none
-		-o-appearance none
-		-webkit-appearance none
-		box-sizing border-box
-		cursor pointer
-		display block
-		height 1.1em
-		left 0
-		outline none
-		position absolute
-		top 0
-		width 1.1em
+/*------------------------------------*\
+    CHECK
+\*------------------------------------*/
+.check
+    -ms-appearance none
+    -o-appearance none
+    -webkit-appearance none
+    box-sizing border-box
+    cursor auto
+    display block
+    height 1.1em
+    left 0
+    opacity 0
+    outline none
+    position absolute
+    top 0
+    width 1.1em
 
-//IMPORTS DE LOS ESTILOS DE CADA TIPO DE CHECKBOX
-@import 'google-opera-checks/check-A'
-@import 'google-opera-checks/check-B'
-@import 'google-opera-checks/check-C'
-@import 'google-opera-checks/check-D'
-@import 'all-navigators-checks/check-AA'
-@import 'all-navigators-checks/check-BB'
-@import 'all-navigators-checks/check-CC'
-@import 'all-navigators-checks/check-DD'
+/*------------------------------------*\
+    IMPORTS DE ESTILOS DE LOS CHECKS
+\*------------------------------------*/
+@import 'components/google-opera-checks/check-A'
+@import 'components/google-opera-checks/check-B'
+@import 'components/google-opera-checks/check-C'
+@import 'components/google-opera-checks/check-D'
+@import 'components/all-navigators-checks/check-AA'
+@import 'components/all-navigators-checks/check-BB'
+@import 'components/all-navigators-checks/check-CC'
+@import 'components/all-navigators-checks/check-DD'

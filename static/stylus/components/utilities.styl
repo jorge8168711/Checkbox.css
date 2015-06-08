@@ -1,0 +1,38 @@
+/**
+ * CONTENIDO
+ *
+ * BLOQUES
+ * wrapper.............Contenedores de los demos
+ * sections-title......Títulos de los wrappers
+ *
+ */
+
+/*------------------------------------*\
+    HEADER
+\*------------------------------------*/
+.wrapper
+    background lighten(divider-color, 85%)//var en shadows.styl
+    border-radius 0.125em //2px
+    box-shadow z-depth-2 //var en shadows.styl
+    margin 4em auto
+    position relative
+    text-align center
+    width 740px
+
+@media screen and (max-width 47.5em)
+    .wrapper
+        width 95%
+
+.sections-title
+    background checked-color //var en shadows.styl
+    border-radius 0.125em 0.125em 0 0
+    box-shadow z-depth-1 //var en shadows.styl
+    color white
+    display block
+    font-size 1.3rem
+    font-weight 100
+    height auto
+    line-height 1.3em
+    margin 0 0 .5em 0
+    padding .1em 0
+    width 100%
