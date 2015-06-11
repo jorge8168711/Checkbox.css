@@ -14,14 +14,12 @@
 .check-A
 	&__background //recuadro ☐  que tapa el input de tipo checkbox cuando el input esta desmarcado
 		background-color white
-		opacity 1
 
-	&__checkbox //checkbox animado ✔ cuando el input esta desmarcado
-		opacity 1
+	&__check //checkbox animado ✔ cuando el input esta desmarcado
 		border solid .125em unchecked-color //Var en shadows.styl
 		transition all .3s ease-in-out
 
-	&:checked + .check-A__background + .check-A__checkbox //checkbox animado ✔ cuando el input esta marcado
+	&:checked + .check-A__background + .check-A__check //checkbox animado ✔ cuando el input esta marcado
 		border-color checked-color //Var en shadows.styl
 		border-right none
 		border-top none
