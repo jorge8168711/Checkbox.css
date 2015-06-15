@@ -78,20 +78,20 @@ input[type="checkbox"]
     height auto
     list-style-type none
     margin .5em
-    padding .5em
+    padding .25em
     text-align left
     width 8em //Define el ancho de los elementos interiores
 
     &__item
         display block
-        margin .25em auto
-        padding .25em 4%
-        width 94%
+        margin .3em auto
+        padding .1em 4%
+        width 92%
 
 /*------------------------------------*\
     CUSTOM-CHECKS
 \*------------------------------------*/
-.custom-checks
+.custom-check
     color secondary-text-color //Var en shadows.styl
     cursor pointer
     display block
@@ -101,6 +101,7 @@ input[type="checkbox"]
     width 100%
 
     &__checkbox
+        border-radius 0.125em
         box-sizing border-box
         cursor auto
         display block
@@ -111,13 +112,15 @@ input[type="checkbox"]
         width 1.1em
 
     &__text
+        // background-color rgba(yellow, .35)
         display block
+        height 1.1em
         left 0
-        line-height 1.1em
-        padding-left 20%
+        lineheight 1.1em
+        padding-left 25%
         position absolute
         top 0
-        width 80%
+        width 75%
 
 /*------------------------------------*\
     IMPORTS LOS ESTILOS DE LOS CHECKS

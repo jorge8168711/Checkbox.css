@@ -24,16 +24,17 @@
 		box-shadow z-depth-1 //Var en shadows.styl
 
 	&__checkbox //checkbox animado ✔ cuando el input esta desmarcado
+		border-radius 0
 		border solid .125em unchecked-color //Var en shadows.styl
 		border-right none
 		border-top none
-		height 0.264em //24% de 1.1em
-		left 0.264em //24% de 1.1em
+		height 0.33em //30% de 1.1em
+		left 0.22em //20% de 1.1em
 		opacity 1
-		top 0.396em //36% de 1.1em
+		top 0.33em //30% de 1.1em
 		transform rotate(-45deg)
 		transition border-left .1s ease-in-out .3s, border-bottom .1s ease-in-out .4s
-		width 0.572em //52% de 1.1em
+		width 0.66em //60% de 1.1em
 
 	&:checked + .check-D__background + .check-D__checkbox //checkbox animado ✔ cuando el input esta marcado
 		border-color checked-color //Var en shadows.styl
