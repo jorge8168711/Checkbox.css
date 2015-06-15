@@ -8,6 +8,23 @@
  */
 
 /*------------------------------------*\
+    RIPPLE
+\*------------------------------------*/
+ span[data-ripple="true"]::before
+     background-color rgba(dark-primary-color, .6)
+     border-radius 50%
+     content ''
+     display block
+     height 100%
+     opacity 0
+     position relative
+     width 100%
+     z-index 100
+
+ input[class^="custom-check__checkbox"]:checked + span[data-ripple="true"]::before
+     animation ripple .3s ease-in-out .1s 1 normal forwards
+
+/*------------------------------------*\
     HEADER
 \*------------------------------------*/
 .wrapper

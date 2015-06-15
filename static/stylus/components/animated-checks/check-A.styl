@@ -17,14 +17,15 @@
 
     &__check //checkbox animado ✔ cuando el input esta desmarcado
         border solid .125em unchecked-color //Var en shadows.styl
-        transition all .3s ease-in
+        transition all .2s ease-in-out
 
     &:checked + .check-A__background + .check-A__check //checkbox animado ✔ cuando el input esta marcado
-         border-color checked-color //Var en shadows.styl
-         border-radius 0
-         border-right none
-         border-top none
-         height 0.495em //45% de 1.1em
-         top .11em
-         transform rotate(-45deg)
-         width 0.99em //90% de 1.1em
+        animation check-A .4s ease-in-out .2s 1 normal forwards
+        border-color checked-color //Var en shadows.styl
+        border-radius 0
+        border-right none
+        border-top none
+        height 0.495em //45% de 1.1em
+        top .11em
+        transform rotate(-45deg)
+        width 0.99em //90% de 1.1em
