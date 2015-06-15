@@ -3,8 +3,8 @@
  *
  * BLOQUES
  * check-B.......Bloque check-B
-		  check-B__background: Fondo de los checks.
-		  check-B__checkbox: Checkbox animado creado con css.
+          check-B__background: Fondo de los checks.
+          check-B__checkbox: Checkbox animado creado con css.
  *
  */
 
@@ -12,28 +12,27 @@
     CHECK-B
 \*------------------------------------*/
 .check-B
-	&__background //recuadro ☐  que tapa el input de tipo checkbox cuando el input esta desmarcado
-		background-color white
-		border-radius .125em
-		opacity 1
-		transition all .3s ease-in
+    &__background //recuadro ☐  que tapa el input de tipo checkbox cuando el input esta desmarcado
+        background-color white
+        border-radius .125em
+        transition all .2s ease-in-out
 
-	&:checked + .check-B__background //recuadro ☐  que tapa el input de tipo checkbox cuando el input esta marcado
-		background-color checked-color //Var en shadows.styl
-		box-shadow z-depth-1 //Var en shadows.styl
+    &:checked + .check-B__background //recuadro ☐  que tapa el input de tipo checkbox cuando el input esta marcado
+        animation bouncing-item .5s ease-in-out .2s 1 normal forwards
+        background-color checked-color //Var en shadows.styl
+        box-shadow z-depth-1 //Var en shadows.styl
 
-	&__checkbox //checkbox animado ✔ cuando el input esta desmarcado
-		border solid .125em unchecked-color //Var en shadows.styl
-		opacity 1
-		transition all .1s ease-in-out .35s
+    &__checkbox //checkbox animado ✔ cuando el input esta desmarcado
+        border solid .125em unchecked-color //Var en shadows.styl
+        transition all .1s ease-in-out .25s
 
-	&:checked + .check-B__background + .check-B__checkbox //checkbox animado ✔ cuando el input esta marcado
-		border-color white
-		border-radius 0
-		border-right none
-		border-top none
-		height 0.33em //30% de 1.1em
-		left 0.22em //20% de 1.1em
-		top 0.33em //30% de 1.1em
-		transform rotate(-45deg)
-		width 0.66em //60% de 1.1em
+    &:checked + .check-B__background + .check-B__checkbox //checkbox animado ✔ cuando el input esta marcado
+        border-color white
+        border-radius 0
+        border-right none
+        border-top none
+        height 0.33em //30% de 1.1em
+        left 0.22em //20% de 1.1em
+        top 0.33em //30% de 1.1em
+        transform rotate(-45deg)
+        width 0.66em //60% de 1.1em

@@ -1,0 +1,1 @@
+.radio-B__background{background-color:#fff;border:solid .125em checked-color;-webkit-border-radius:50%;border-radius:50%;-webkit-transition:all .3s ease-in;transition:all .3s ease-in}.radio-B:checked + .radio-B__background{background:checked-color;border:none;-webkit-box-shadow:z-depth-1;box-shadow:z-depth-1;-webkit-transform:rotateY(180deg);transform:rotateY(180deg)}

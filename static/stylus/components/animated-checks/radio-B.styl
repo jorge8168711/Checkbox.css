@@ -1,0 +1,30 @@
+/**
+ * CONTENIDO
+ *
+ * BLOQUES
+ * radio-B.......Bloque radio-B
+          radio-B__background: Fondo de los checks.
+          radio-B__radio: radio animado creado con css.
+ *
+ */
+
+/*------------------------------------*\
+    radio-B
+\*------------------------------------*/
+.radio-B
+    &__background //recuadro ☐  que tapa el input de tipo radio cuando el input esta desmarcado
+        background-color white
+        border solid .125em checked-color //Var en shadows.styl
+        border-radius 50%
+        transition all .3s ease-in
+
+    &:checked + .radio-B__background
+        box-shadow z-depth-1
+
+    &__checkbox
+        background checked-color
+        border-radius 50%
+        transform scale(0)
+
+    &:checked + .radio-B__background + .radio-B__checkbox
+        animation radio-B .5s ease-in-out 1ms 1 normal forwards
