@@ -62,6 +62,10 @@
     font-style: normal;
 }
 
+input[type="checkbox"]
+    opacity 0
+    outline none
+
 /*------------------------------------*\
     LIST
 \*------------------------------------*/
@@ -79,77 +83,49 @@
     width 8em //Define el ancho de los elementos interiores
 
     &__item
-        margin .25em 0
-        padding .25em 4%
+        display block
+        margin .3em auto
+        padding .1em 4%
         width 92%
 
 /*------------------------------------*\
-    LABEL
+    CUSTOM-CHECKS
 \*------------------------------------*/
-.label
+.custom-check
     color secondary-text-color //Var en shadows.styl
     cursor pointer
     display block
     font-weight 400
     height 1.1em
     position relative
-    width 1.1em
+    width 100%
 
-    &__check
-        -ms-appearance none
-        -o-appearance none
-        -webkit-appearance none
-        cursor pointer
+    &__checkbox
+        border-radius 0.125em
+        box-sizing border-box
+        cursor auto
         display block
         height 1.1em
         left 0
-        outline none
         position absolute
         top 0
         width 1.1em
 
-        &::before
-        &::after
-            box-sizing border-box
-            content ''
-            cursor pointer
-            height 1.1em
-            left 0
-            position absolute
-            top 0
-            width 1.1em
-
     &__text
-        display inline-block
-        margin-left 2.2em
-        width 100%
+        // background-color rgba(yellow, .35)
+        display block
+        height 1.1em
+        left 0
+        lineheight 1.1em
+        padding-left 25%
+        position absolute
+        top 0
+        width 75%
 
 /*------------------------------------*\
-    CHECK
+    IMPORTS LOS ESTILOS DE LOS CHECKS
 \*------------------------------------*/
-.check
-    -ms-appearance none
-    -o-appearance none
-    -webkit-appearance none
-    box-sizing border-box
-    cursor auto
-    display block
-    height 1.1em
-    left 0
-    opacity 0
-    outline none
-    position absolute
-    top 0
-    width 1.1em
-
-/*------------------------------------*\
-    IMPORTS DE ESTILOS DE LOS CHECKS
-\*------------------------------------*/
-@import 'components/google-opera-checks/check-A'
-@import 'components/google-opera-checks/check-B'
-@import 'components/google-opera-checks/check-C'
-@import 'components/google-opera-checks/check-D'
-@import 'components/all-navigators-checks/check-AA'
-@import 'components/all-navigators-checks/check-BB'
-@import 'components/all-navigators-checks/check-CC'
-@import 'components/all-navigators-checks/check-DD'
+@import 'components/animated-checks/check-A'
+@import 'components/animated-checks/check-B'
+@import 'components/animated-checks/check-C'
+@import 'components/animated-checks/check-D'
