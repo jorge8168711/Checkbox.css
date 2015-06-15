@@ -1,3 +1,28 @@
+@keyframes ripple
+    0%
+        opacity .05
+        transform scale(0)
+
+    25%
+        opacity .2
+        transform scale(1.5)
+
+    50%
+        opacity .3
+        transform scale(2)
+
+    70%
+        opacity .4
+        transform scale(2.5)
+
+    80%
+        opacity .1
+        transform scale(.1)
+
+    100%
+        transform scale(0)
+        opacity 0
+
 @keyframes bouncing-item
     10%, 50%, 80%, 100%
         transform scale(1)
