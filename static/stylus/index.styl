@@ -5,7 +5,8 @@
  *      1. Normalize - normalize en el formato de stylus.
  *      2. Variables - Variables de color y sombras.
  *      2. Utilidades - patrones de diseño genéricos.
- *      3. Componentes – Componentes construídos a partir de objetos
+ *      3. Elementos sin clases
+ *      4. Componentes – Componentes construídos a partir de objetos
  *         y sus extensiones.
  *
  * Convenciones para los nombres de las clases
@@ -18,28 +19,32 @@
  *         .bloque{}
  *         .bloque__elemento{}
  *         .bloque--modificador{}
-
+ *
  * CONTENIDOS
  *
  * IMPORTS
+ * ========================================================================
  * Variables.............Variables de color sombras.
  * Normalize.styl........Normalize en formato .styl
  * Utilidades............Estilos que se aplicn a cualquier elemento.
  * Header................Estilos del header y sus partes.
  * font-face.............Imports de los iconfonts.
  *
- * BLOQUES
- * list.............Listas de checks.
- *     list__item: Items de la lista.
-
- * label............Checks compatibles con chrome y opera.
-       label__check: Posicionamiento alto y ancho de los input de tipo checkbox chrome y opera.
-       label__check::before/after: Estilos base de los pseudoelementos.
-       label__text: Texto dentro de cada label.
-
- * check............Posicionamiento alto y ancho de los input de tipo checkbox todos los navegadores.
+ * ELEMENTOS SIN CLASES
+ * ========================================================================
+ * input-styles..........Opacidad en cero de los inputs evitar que se vean.
  *
- * IMPORTS DE ESTILOS CHECKS
+ * BLOQUES
+ * ========================================================================
+ * .list.............Lista de checks.
+ *     list__item....Items de la lista.
+ *
+ * .custom-check................Estilos de tamaño del contenedor de los custom-checks.
+ *     custom-check__checkbox...Estilos de posicionamiento de los custom-checks.
+ *     custom-check__text.......Estilos del texto que tiene cada custom-check.
+ *
+ * IMPORTS DE ESTILOS DE LOS CHECKS PERSONALIZADOS
+ * ========================================================================
  * Imports.........Estilos independientes de cada tipo de check.
  */
 
@@ -48,7 +53,7 @@
 \*------------------------------------*/
 @import 'tools/variables'
 @import 'tools/normalize-v3.0.3-ROBOTO'
-@import 'components/utilities'
+@import 'utilities'
 @import 'components/header'
 
 @font-face {
@@ -62,6 +67,9 @@
     font-style: normal;
 }
 
+/*------------------------------------*\
+    INPUT STYLES
+\*------------------------------------*/
 input[type="checkbox"]
 input[type="radio"]
     opacity 0
@@ -72,34 +80,32 @@ input[type="radio"]
 \*------------------------------------*/
 .list
     background-color white
-    border-radius .125em //2px
+    border-radius .125em
     box-shadow z-depth-1 //var en shadows.styl
     display inline-block
     font-size 1.1rem //Define el tamaño de todo los elementos
     height auto
     list-style-type none
     margin .5em
-    padding .25em
-    text-align left
+    padding .5em
     width 8em //Define el ancho de los elementos interiores
 
     &__item
-        display block
-        margin .3em auto
-        padding .1em 4%
-        width 92%
+        text-align center
+        width 100%
 
 /*------------------------------------*\
-    CUSTOM-CHECKS
+    CUSTOM-CHECK
 \*------------------------------------*/
 .custom-check
     color secondary-text-color //Var en shadows.styl
     cursor pointer
-    display block
+    display inline-block
     font-weight 400
     height 1.1em
+    margin .22em auto
     position relative
-    width 100%
+    width 95%
 
     &__checkbox
         border-radius 0.125em
@@ -113,25 +119,25 @@ input[type="radio"]
         width 1.1em
 
     &__text
-        // background-color rgba(yellow, .35)
         display block
         height 1.1em
         left 0
         lineheight 1.1em
-        padding-left 25%
+        padding-left 1.7em
         position absolute
+        text-align left
         top 0
-        width 75%
+        width auto
 
-/*------------------------------------*\
-    IMPORTS LOS ESTILOS DE LOS CHECKS
-\*------------------------------------*/
-@import 'components/animated-checks/check-A'
-@import 'components/animated-checks/check-B'
-@import 'components/animated-checks/check-C'
-@import 'components/animated-checks/check-D'
-@import 'components/animated-checks/radio-A'
-@import 'components/animated-checks/radio-B'
-@import 'components/animated-checks/radio-C'
-@import 'components/animated-checks/radio-D'
-@import 'components/animated-checks/keyframes'
+/*---------------------------------------*\
+    IMPORTS CHECKS PERSONALIZADOS
+\*---------------------------------------*/
+@import 'components/custom-checks/check-A'
+@import 'components/custom-checks/check-B'
+@import 'components/custom-checks/check-C'
+@import 'components/custom-checks/check-D'
+@import 'components/custom-checks/radio-A'
+@import 'components/custom-checks/radio-B'
+@import 'components/custom-checks/radio-C'
+@import 'components/custom-checks/radio-D'
+@import 'components/custom-checks/keyframes'

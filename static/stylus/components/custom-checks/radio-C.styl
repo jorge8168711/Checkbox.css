@@ -1,0 +1,32 @@
+/**
+ * ESTILOS PARA INPUT DE TIPO RADIO
+ *
+ * CONTENIDO
+ * ==========================================================
+ * radio-C......................Estilos del radio animado C.
+ *        radio-C__background...Fondo del radio animado.
+ *        radio-C__checkbox.....Símbolo animado del radio.
+ *
+ */
+
+/*------------------------------------*\
+    radio-C
+\*------------------------------------*/
+.radio-C
+    &__background //fondo '❍' cuando .custom-check__checkbox esta desmarcado
+        background-color white
+        border solid .125em checked-color //Var en shadows.styl
+        border-radius 50%
+        transition all .3s ease-in
+
+    &:checked + .radio-C__background //fondo '❍' cuando .custom-check__checkbox esta marcado
+        box-shadow z-depth-1
+
+    &__checkbox //símbolo '●' cuando .custom-check__checkbox esta desmarcado
+        border-radius 50%
+        transform scale(0)
+        transition all .3s ease-in-out
+
+    &:checked + .radio-C__background + .radio-C__checkbox //símbolo '●' cuando .custom-check__checkbox esta marcado
+        background checked-color
+        transform scale(.9)

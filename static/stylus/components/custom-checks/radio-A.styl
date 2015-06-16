@@ -1,0 +1,33 @@
+/**
+ * ESTILOS PARA INPUT DE TIPO RADIO
+ *
+ * CONTENIDO
+ * ==========================================================
+ * radio-A......................Estilos del radio animado A.
+ *        radio-A__background...Fondo del radio animado.
+ *        radio-A__checkbox.....Símbolo animado del radio.
+ *
+ */
+
+/*------------------------------------*\
+    radio-A
+\*------------------------------------*/
+.radio-A
+    &__background //fondo '❍' cuando .custom-check__checkbox esta desmarcado
+        background-color white
+        border solid .125em checked-color //Var en shadows.styl
+        border-radius 50%
+        transition all .3s ease-in
+
+    &:checked + .radio-A__background //fondo '❍' cuando .custom-check__checkbox esta marcado
+        animation bouncing-item .5s ease-in-out .35s 1 normal forwards
+        box-shadow z-depth-1
+        transform rotateY(180deg)
+
+    &__checkbox //símbolo '●' cuando .custom-check__checkbox esta desmarcado
+        background checked-color
+        border-radius 50%
+        transform scale(0)
+
+    &:checked + .radio-A__background + .radio-A__checkbox //símbolo '●' cuando .custom-check__checkbox esta marcado
+        animation radio-B .5s ease-in-out 1ms 1 normal forwards

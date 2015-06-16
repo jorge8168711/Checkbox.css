@@ -1,10 +1,11 @@
 /**
- * CONTENIDO
+ * ESTILOS PARA INPUT DE TIPO CHECKBOX
  *
- * BLOQUES
- * check-C.......Bloque check-C
-          check-C__background: Fondo de los checks.
-          check-C__checkbox: Checkbox animado creado con css.
+ * CONTENIDO
+ * ==========================================================
+ * check-C......................Estilos del check animado C.
+ *        check-C__background...Fondo del check animado.
+ *        check-C__checkbox.....Símbolo animado del checkbox.
  *
  */
 
@@ -12,18 +13,18 @@
     CHECK-C
 \*------------------------------------*/
 .check-C
-    &__background //recuadro ☐  que tapa el input de tipo checkbox cuando el input esta desmarcado
+    &__background //fondo '☐' cuando .custom-check__checkbox esta desmarcado
         background-color unchecked-color //Var en shadows.styl
         border-radius .125em
         opacity 1
         transition all .2s ease-in-out
 
-    &:checked + .check-C__background //recuadro ☐  que tapa el input de tipo checkbox cuando el input esta marcado
+    &:checked + .check-C__background //fondo '☐' cuando .custom-check__checkbox esta marcado
         animation bouncing-item .5s ease-in-out 0s 1 normal forwards
         background-color checked-color //Var en shadows.styl
         box-shadow z-depth-1 //Var en shadows.styl
 
-    &__checkbox //checkbox animado ✔ cuando el input esta desmarcado
+    &__checkbox //símbolo '✔' cuando .custom-check__checkbox esta desmarcado
         border solid .125em white
         border-radius 0
         border-right none

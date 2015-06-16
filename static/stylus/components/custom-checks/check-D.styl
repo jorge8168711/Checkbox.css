@@ -1,10 +1,11 @@
 /**
- * CONTENIDO
+ * ESTILOS PARA INPUT DE TIPO CHECKBOX
  *
- * BLOQUES
- * check-D.......Bloque check-D
-          check-D__background: Fondo de los checks.
-          check-D__checkbox: Checkbox animado creado con css.
+ * CONTENIDO
+ * ==========================================================
+ * check-D......................Estilos del check animado D.
+ *        check-D__background...Fondo del check animado.
+ *        check-D__checkbox.....Símbolo animado del checkbox.
  *
  */
 
@@ -12,18 +13,18 @@
     CHECK-D
 \*------------------------------------*/
 .check-D
-    &__background //recuadro ☐  que tapa el input de tipo checkbox cuando el input esta desmarcado
+    &__background //fondo '☐' cuando .custom-check__checkbox esta desmarcado
         background-color white
         border solid .125em unchecked-color //Var en shadows.styl
         border-radius .125em
         transition border .2s ease-in-out .35s
 
-    &:checked + .check-D__background //recuadro ☐  que tapa el input de tipo checkbox cuando el input esta marcado
+    &:checked + .check-D__background //fondo '☐' cuando .custom-check__checkbox esta marcado
         animation bouncing-item .5s ease-in-out .35s 1 normal forwards
         border-color checked-color //Var en shadows.styl
         box-shadow z-depth-1 //Var en shadows.styl
 
-    &__checkbox //checkbox animado ✔ cuando el input esta desmarcado
+    &__checkbox //símbolo '✔' cuando .custom-check__checkbox esta desmarcado
         border solid .125em unchecked-color //Var en shadows.styl
         border-radius 0
         border-right none
@@ -35,5 +36,5 @@
         transition border-left .1s ease-in-out .25s, border-bottom .1s ease-in-out .35s
         width 0.66em //60% de 1.1em
 
-    &:checked + .check-D__background + .check-D__checkbox //checkbox animado ✔ cuando el input esta marcado
+    &:checked + .check-D__background + .check-D__checkbox //símbolo '✔' cuando .custom-check__checkbox esta marcado
         border-color checked-color //Var en shadows.styl
