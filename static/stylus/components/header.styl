@@ -1,20 +1,38 @@
 /**
- * CONTENIDO
+ ***************************************************************************
+ *******************************--CONTENIDO--******************************
+ ***************************************************************************
+ *
  *
  * BLOQUES
  * ================================================================
- * header......Contenedor header
+ * font-face...........Imports de los iconfonts.
  *
- * logo................Contenedor del logo
- *     logo__image.....Imagen del logo del proyecto
- *     logo__shadow....Sombra del logo
+ * header..............Estilos del contenedor header que contiene los
+ *                     elementos, logo y nav.
  *
- * nav.............Contenedor de los links sociales
- *    nav__item....Links de github y twitter
+ * logo................Figure que contiene el logo del proyecto.
+ *     logo__image.....Imagen del logo del proyecto,
+ *     logo__shadow....Sombra del logo,
  *
- * @media queries...Estilos que hacen responsive el header
- *
+ * nav.................Contenedor de los links sociales
+ *    nav__item........Elementos de tipo link del nav.
  */
+
+
+/*------------------------------------*\
+    FONT-FACE
+\*------------------------------------*/
+@font-face {
+    font-family: 'icomoon';
+    src:url('../fonts/icomoon.eot?-77glzp');
+    src:url('../fonts/icomoon.eot?#iefix-77glzp') format('embedded-opentype'),
+        url('../fonts/icomoon.ttf?-77glzp') format('truetype'),
+        url('../fonts/icomoon.woff?-77glzp') format('woff'),
+        url('../fonts/icomoon.svg?-77glzp#icomoon') format('svg');
+    font-weight: normal;
+    font-style: normal;
+}
 
 /*------------------------------------*\
     HEADER
@@ -28,6 +46,11 @@
     position relative
     text-align center
     width 100%
+
+@media screen and (max-width: 30em)
+    .header
+        height 100px
+        margin 0 0 14em 0
 
 /*------------------------------------*\
     LOGO
@@ -59,6 +82,13 @@
         top 9%
         width 82%
         z-index 1
+
+@media screen and (max-width: 30em)
+    .logo
+        margin-top -.1em
+
+        &__shadow
+            box-shadow z-depth-2 //var en shadows.styl
 
 /*------------------------------------*\
     NAV
@@ -114,28 +144,7 @@
             right -.5rem
             top 0
 
-/*------------------------------------*\
-    MEDIA QUERIES
-\*------------------------------------*/
-@media screen and (max-width: 32.5em)
-    .nav__item
-        font-size 1.1rem
-        padding 0
-        text-align center
-
-        &:nth-child(2)
-            width 30%
-
 @media screen and (max-width: 30em)
-    .header
-        height 100px
-
-    .logo
-        margin-top -.1em
-
-        &__shadow
-            box-shadow z-depth-2 //var en shadows.styl
-
     .nav
         height 2.5em
         top 100px
@@ -157,3 +166,12 @@
             &:nth-child(1)::before
             &:nth-child(3)::after
                 font-size .9rem
+
+@media screen and (max-width: 32.5em)
+    .nav__item
+        font-size 1.1rem
+        padding 0
+        text-align center
+
+        &:nth-child(2)
+            width 30%

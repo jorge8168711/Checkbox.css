@@ -1,14 +1,19 @@
 /**
- * CONTENIDO
+ **************************************************************************
+ *******************************--CONTENIDO--******************************
+ **************************************************************************
  *
  * BLOQUES
  * ================================================================
- * ripple..............Agrega el efecto de ripple al elemento con
- *                     con el data-atribute data-ripple="true"
- * wrapper.............Contenedores de los demos
- * sections-title......Títulos de los wrappers
+ * ripple..............Agrega el efecto de ripple al elemento
+ *                     .check-[LETRA]__background con con el
+ *                     data-atribute data-ripple="true".
  *
+ * wrapper.............Contenedor de principal de los grupos checks.
+ *
+ * sections-title......Estilos de los títulos de los wrappers.
  */
+
 
 /*------------------------------------*\
     RIPPLE
@@ -28,7 +33,7 @@
      animation ripple .3s ease-in-out .1s 1 normal forwards
 
 /*------------------------------------*\
-    HEADER
+    WRAPPER
 \*------------------------------------*/
 .wrapper
     background white//var en shadows.styl
@@ -42,8 +47,11 @@
 
 @media screen and (max-width 47.5em)
     .wrapper
-        width 95%
+        width 90%
 
+/*------------------------------------*\
+    SECTIONS-TITLE
+\*------------------------------------*/
 .sections-title
     border-bottom border-1
     color lighten(secondary-text-color, 10%) //var en variables.styl

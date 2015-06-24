@@ -1,15 +1,9 @@
 /**
- * DESCRIPCIÓN DE LA ESTRUCTURA DEL PROYECTO
+ **************************************************************************
+ **************--DESCRIPCIÓN DE LA ESTRUCTURA DEL PROYECTO--***************
+ **************************************************************************
  *
- * Orden del código
- *      1. Normalize - normalize en el formato de stylus.
- *      2. Variables - Variables de color y sombras.
- *      2. Utilidades - patrones de diseño genéricos.
- *      3. Elementos sin clases
- *      4. Componentes – Componentes construídos a partir de objetos
- *         y sus extensiones.
- *
- * Convenciones para los nombres de las clases
+ * CONVENCIONES PARA LOS NOMBRES DE LAS CLASES
  *      BEM es una metodología para nombrar y clasificar selectores
  *      CSS de manera que los hacemos más estrictos, transparentes e
  *      informativos.
@@ -20,118 +14,89 @@
  *         .bloque__elemento{}
  *         .bloque--modificador{}
  *
- * CONTENIDOS
+ * ORDEN DEL CÓDIGO
+ *      1. Variables - Variables de color y sombras.
+ *      2. Normalize - Normalizando estilos - zona cero.
+ *      3. Elementos sin clase.
+ *      4. Utilidades - patrones de diseño genéricos.
+ *      5. Componentes – Componentes construidos a partir de objetos
+ *         y sus extensiones.
  *
- * IMPORTS
+ **************************************************************************
+ *******************************--CONTENIDO--******************************
+ **************************************************************************
+ *
+ * NORMALIZE & VARIABLES
  * ========================================================================
  * Variables.............Variables de color sombras.
- * Normalize.styl........Normalize en formato .styl
- * Utilidades............Estilos que se aplicn a cualquier elemento.
- * Header................Estilos del header y sus partes.
- * font-face.............Imports de los iconfonts.
+ *
+ * Normalize.............Normalize que contiene el font-family Roboto y
+ *                       el tamaño de la fuente.
+ *
  *
  * ELEMENTOS SIN CLASES
  * ========================================================================
+ * body..................Elimina margin por defecto del body.
  * input-styles..........Opacidad en cero de los inputs evitar que se vean.
  *
- * BLOQUES
- * ========================================================================
- * .list.............Lista de checks.
- *     list__item....Items de la lista.
  *
- * .custom-check................Estilos de tamaño del contenedor de los custom-checks.
- *     custom-check__checkbox...Estilos de posicionamiento de los custom-checks.
- *     custom-check__text.......Estilos del texto que tiene cada custom-check.
- *
- * IMPORTS DE ESTILOS DE LOS CHECKS PERSONALIZADOS
+ * COMPONENTES
  * ========================================================================
- * Imports.........Estilos independientes de cada tipo de check.
+ * utilities.............Estilos genéricos para los elementos.
+ *
+ * header................Estilos del header y sus partes.
+ *
+ * landing...............Pequeño landing que contiene el nombre del proyecto.
+ *
+ * list..................Estilos para los Ul y los LI que contienen los
+ *                       elementos custom-check.
+ *
+ * custom-check..........Estilos que definen la posición y el tamaño de los
+ *                       checks personalizados.
+ *
+ *
+ * COMPONENTES - CHECKS PERSONALIZADOS
+ * ========================================================================
+ * Estilos de cada uno de los tipos de check diseñados, estas clases
+ * definen el tipo de apariencia que va a tener cada tipo de checkbox.
+ * Cada uno de los  tipos de check se crea en archivos independientes
+ * para facilitar la edición y la creación de más estilos.
+ *
+ *
+ * COMPONENTES - KEYFRAMES
+ * ========================================================================
+ * Archivo con todas las animaciones que utilizan los checks personalizados.
  */
 
+
 /*------------------------------------*\
-    IMPORTS
+    NORMALIZE & VARIABLES
 \*------------------------------------*/
 @import 'tools/variables'
 @import 'tools/normalize-v3.0.3-ROBOTO'
-@import 'utilities'
-@import 'components/header'
-@import 'components/landing'
-
-@font-face {
-    font-family: 'icomoon';
-    src:url('../fonts/icomoon.eot?-77glzp');
-    src:url('../fonts/icomoon.eot?#iefix-77glzp') format('embedded-opentype'),
-        url('../fonts/icomoon.ttf?-77glzp') format('truetype'),
-        url('../fonts/icomoon.woff?-77glzp') format('woff'),
-        url('../fonts/icomoon.svg?-77glzp#icomoon') format('svg');
-    font-weight: normal;
-    font-style: normal;
-}
 
 /*------------------------------------*\
-    INPUT STYLES
+    ELEMENTOS SIN CLASE
 \*------------------------------------*/
+// body
+//     margin 0
+
 input[type="checkbox"]
 input[type="radio"]
     opacity 0
     outline none
 
 /*------------------------------------*\
-    LIST
+    COMPONENTES
 \*------------------------------------*/
-.list
-    background-color white
-    border-radius .125em
-    box-shadow z-depth-2 //var en shadows.styl
-    display inline-block
-    font-size 1.3rem //Define el tamaño de todo los elementos
-    height auto
-    list-style-type none
-    margin .5em
-    padding .5em
-    width 6.5em //Define el ancho de los elementos interiores
-
-    &__item
-        text-align center
-        width 100%
-
-/*------------------------------------*\
-    CUSTOM-CHECK
-\*------------------------------------*/
-.custom-check
-    color secondary-text-color //Var en shadows.styl
-    cursor pointer
-    display inline-block
-    font-weight 400
-    height 1.1em
-    margin .11em auto
-    position relative
-    width 95%
-
-    &__checkbox
-        border-radius 0.125em
-        box-sizing border-box
-        cursor auto
-        display block
-        height 1.1em
-        left 0
-        position absolute
-        top 0
-        width 1.1em
-
-    &__text
-        display block
-        height 1.1em
-        left 0
-        lineheight 1.1em
-        padding-left 1.7em
-        position absolute
-        text-align left
-        top 0
-        width auto
+@import 'utilities'
+@import 'components/header'
+@import 'components/landing'
+@import 'components/list'
+@import 'components/custom-check'
 
 /*---------------------------------------*\
-    IMPORTS CHECKS PERSONALIZADOS
+    COMPONENTES - CHECKS PERSONALIZADOS
 \*---------------------------------------*/
 @import 'components/custom-checks/check-A'
 @import 'components/custom-checks/check-B'
@@ -141,4 +106,8 @@ input[type="radio"]
 @import 'components/custom-checks/radio-B'
 @import 'components/custom-checks/radio-C'
 @import 'components/custom-checks/radio-D'
+
+/*---------------------------------------*\
+    COMPONENTES - KEYFRAMES
+\*---------------------------------------*/
 @import 'components/custom-checks/keyframes'

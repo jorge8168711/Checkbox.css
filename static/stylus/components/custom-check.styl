@@ -1,0 +1,51 @@
+/**
+ * CONTENIDO
+ * ========================================================================
+ * custom-check................Tamaño, color y posicionamiento del label que
+ *                              contiene los elementos elementos necesarios para
+ *                              construir los custom-checks.
+ *
+ *     custom-check__checkbox...Tamaño y posicionamiento del input de tipo
+ *                              checkbox o radio, que sirve para activar la
+ *                              interacción del checkbox animado.
+ *
+ *     custom-check__text.......Estilos del texto que tiene cada custom-check.
+ */
+
+
+/*------------------------------------*\
+    CUSTOM-CHECK
+\*------------------------------------*/
+.custom-check
+    color secondary-text-color //Var en shadows.styl
+    cursor pointer
+    display inline-block
+    font-size 1rem
+    font-weight 400
+    height 1.1em
+    margin .11em auto
+    position relative
+    width 95%
+
+    &__checkbox
+        border-radius 0.125em
+        box-sizing border-box
+        cursor auto
+        display block
+        height 1.1em
+        left 0
+        position absolute
+        top 0
+        width 1.1em
+
+    &__text
+        display block
+        height 1.1em
+        left 0
+        lineheight 1.1em
+        margin-top -.02em
+        padding-left 1.7em
+        position absolute
+        text-align left
+        top 0
+        width auto
