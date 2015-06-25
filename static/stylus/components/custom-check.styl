@@ -17,20 +17,19 @@
     CUSTOM-CHECK
 \*------------------------------------*/
 .custom-check
-    color secondary-text-color //Var en shadows.styl
+    color secondary-text-color //variable en shadows.styl
     cursor pointer
-    display inline-block
-    font-size 1rem
+    display block
+    font-size 1rem //Define el tamaño del check animado y el texto
     font-weight 400
     height 1.1em
-    margin .11em auto
+    margin .6em auto
     position relative
     width 95%
 
     &__checkbox
         border-radius 0.125em
         box-sizing border-box
-        cursor auto
         display block
         height 1.1em
         left 0
@@ -48,4 +47,3 @@
         position absolute
         text-align left
         top 0
-        width auto

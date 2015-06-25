@@ -38,19 +38,17 @@
     HEADER
 \*------------------------------------*/
 .header
-    background-color dark-primary-color //var en shadows.styl
+    background-color dark-primary-color //variable en shadows.styl
     display block
     height 80px
     margin 0 0 17em 0
-    padding 0
-    position relative
     text-align center
     width 100%
 
 @media screen and (max-width: 30em)
     .header
         height 100px
-        margin 0 0 14em 0
+        margin 0 0 15em 0
 
 /*------------------------------------*\
     LOGO
@@ -59,43 +57,36 @@
     display inline-block
     height 132px
     margin 1em 0 0 0
-    padding 0
     position relative
+    z-index 3
     width 132px
 
     &__image
-        margin 0
         max-width 100%
-        padding 0
         position relative
-        z-index 2
+        z-index 1
 
     &__shadow
         background-color rgba(white, 0)
         border-radius 50%
-        box-shadow z-depth-2 //var en shadows.styl
-        color white
-        font-size 0rem
+        box-shadow z-depth-2 //variavle en shadows.styl
+        color rgba(white, 0)
         height 82%
         left 9%
         position absolute
         top 9%
         width 82%
-        z-index 1
 
 @media screen and (max-width: 30em)
     .logo
         margin-top -.1em
 
-        &__shadow
-            box-shadow z-depth-2 //var en shadows.styl
-
 /*------------------------------------*\
     NAV
 \*------------------------------------*/
 .nav
-    background-color accent-color //var en shadows.styl
-    box-shadow z-depth-1 //var en shadows.styl
+    background-color accent-color //variable en shadows.styl
+    box-shadow z-depth-1 //variable en shadows.styl
     font-size 1.3rem
     font-weight 100
     height 32px
@@ -115,63 +106,52 @@
         text-align center
         text-decoration none
         transition all .1s ease
-        width auto
+        width 5.5em
+
+        &:nth-child(2)
+            background-color none
+            box-shadow none
+            cursor auto
+            opacity 0
 
         &:hover
-            font-weight 400
-            transform scale(1.05)
+            font-weight normal
+            transform scale(1.03)
 
-        &:nth-child(1)::before
+        &:nth-child(1)::after
         &:nth-child(3)::after
-            -moz-osx-font-smoothing: grayscale;
-            -webkit-font-smoothing: antialiased;
+            -moz-osx-font-smoothing grayscale
+            -webkit-font-smoothing antialiased
             content '\e600'
             font-family 'icomoon'
             font-size 1rem
             position absolute
 
-        &:nth-child(1)::before
-            left -.5rem
+        &:nth-child(1)::after
+            left 1.2em
             top 0
 
-        &:nth-child(2)
-            color checked-color //var en shadows.styl
-            cursor auto
-            opacity 0
-            width 100px
-
         &:nth-child(3)::after
-            right -.5rem
+            right .2em
             top 0
 
 @media screen and (max-width: 30em)
     .nav
-        height 2.5em
+        height 3.8em
         top 100px
 
         &__item
-            margin-top 1.2em
+            background-color rgba(white, .2)
+            box-shadow z-depth-1
+            font-size 1.1rem
+            font-weight 400
+            margin-top 1.8em
+            padding 0
+            width 6.5em
 
-            &:nth-child(1)
-                padding-left .5em
-                text-align right
+            &:nth-child(1)::after
+            &:nth-child(3)::after
+                display none
 
             &:nth-child(2)
-                width 25%
-
-            &:nth-child(3)
-                padding-right .5em
-                text-align left
-
-            &:nth-child(1)::before
-            &:nth-child(3)::after
-                font-size .9rem
-
-@media screen and (max-width: 32.5em)
-    .nav__item
-        font-size 1.1rem
-        padding 0
-        text-align center
-
-        &:nth-child(2)
-            width 30%
+                width 2em

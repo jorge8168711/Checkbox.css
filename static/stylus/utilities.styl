@@ -19,29 +19,26 @@
     RIPPLE
 \*------------------------------------*/
  span[data-ripple="true"]::before
-     background-color rgba(dark-primary-color, .6)
+     background-color rgba(accent-color, .7) //variable en variables.styl
      border-radius 50%
      content ''
      display block
      height 100%
      opacity 0
-     position relative
      width 100%
-     z-index 100
 
  input[class^="custom-check__checkbox"]:checked + span[data-ripple="true"]::before
-     animation ripple .3s ease-in-out .1s 1 normal forwards
+     animation ripple .35s ease .1s 1 normal forwards //Animación en el archivo keyframes.styl
 
 /*------------------------------------*\
     WRAPPER
 \*------------------------------------*/
 .wrapper
-    background white//var en shadows.styl
+    background white
     border-radius 0.125em //2px
-    box-shadow z-depth-2 //var en shadows.styl
+    box-shadow z-depth-2 ///variable en variables.styl
     margin 4em auto
     padding .5em 0 1.5em 0
-    position relative
     text-align center
     width 740px
 
@@ -53,7 +50,7 @@
     SECTIONS-TITLE
 \*------------------------------------*/
 .sections-title
-    border-bottom border-1
+    border-bottom border-1 //variable en variables.styl
     color lighten(secondary-text-color, 10%) //var en variables.styl
     display block
     font-size 1.3rem

@@ -11,46 +11,43 @@
 \*------------------------------------*/
 .landing
     background-color rgba(white, .9)
-    box-shadow z-depth-1
+    box-shadow z-depth-1 //variable en shadows.styl
     height 200px
-    overflow hidden
     position absolute
     text-align center
     top 112px
     width 100%
 
     &__title
-        color accent-color
+        color accent-color //variable en shadows.styl
         display inline-block
-        font-size 4em
+        font-size 4rem
         font-weight 100
-        margin .8em 0 .2em 0
-        padding 0
+        margin .8em auto .2em auto
         width 100%
 
     &__autor
-        background-color accent-color
+        background-color accent-color //variable en shadows.styl
         border-radius .125em
         box-shadow z-depth-1
         color white
-        font-size 1em
+        font-size 1rem
         font-weight 400
-        padding .3em
-        position relative
+        padding .5em
         text-decoration none
         transition all .2s ease
-        z-index 3
 
         &:hover
-            box-shadow z-depth-2
+            box-shadow z-depth-2 //variable en shadows.styl
 
-@media screen and (max-width: 27em)
+@media screen and (max-width: 30em)
     .landing
         height 140px
+        top 175px
 
         &__title
-            font-size 2.5em
-            margin 1.2em 0 .2em 0
+            font-size 2.9rem
+            margin .6em 0 .2em 0
 
         &__autor
-            font-size 1em
+            padding .3em
