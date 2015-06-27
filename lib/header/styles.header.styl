@@ -25,11 +25,11 @@
 \*------------------------------------*/
 @font-face {
     font-family: 'icomoon';
-    src:url('./static/fonts/icomoon.eot?-77glzp');
-    src:url('./static/fonts/icomoon.eot?#iefix-77glzp') format('embedded-opentype'),
-        url('./static/fonts/icomoon.ttf?-77glzp') format('truetype'),
-        url('./static/fonts/icomoon.woff?-77glzp') format('woff'),
-        url('./static/fonts/icomoon.svg?-77glzp#icomoon') format('svg');
+    src:url('./public/fonts/icomoon.eot?-77glzp');
+    src:url('./public/fonts/icomoon.eot?#iefix-77glzp') format('embedded-opentype'),
+        url('./public/fonts/icomoon.ttf?-77glzp') format('truetype'),
+        url('./public/fonts/icomoon.woff?-77glzp') format('woff'),
+        url('./public/fonts/icomoon.svg?-77glzp#icomoon') format('svg');
     font-weight: normal;
     font-style: normal;
 }
@@ -148,6 +148,12 @@
             margin-top 1.8em
             padding 0
             width 6.5em
+            transition all ease .3s
+
+            &:hover
+                background-color rgba(white, .3)
+                box-shadow z-depth-2
+                transform scale(1)
 
             &:nth-child(1)::after
             &:nth-child(3)::after

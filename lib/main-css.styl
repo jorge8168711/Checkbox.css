@@ -3,6 +3,26 @@
  **************--DESCRIPCIÓN DE LA ESTRUCTURA DEL PROYECTO--***************
  **************************************************************************
  *
+ * Los estilos del proyecto se dividen en dos partes que son las siguientes:
+ *
+ *      main-css.styl: Este archivo contiene los estilos y los imports
+ *                     principales que sirven para OPTIMIZAR LA ENTREGA DE
+ *                     CSS según google, basado en el análisis de
+ *                     PageSpeed-Insights.
+ *                     Los estilos contenidos en este archivo se compilan
+ *                     y se colocan en la etiqueta HEAD dentro de una
+ *                     etiqueta style, esto se hace con la finalidad de
+ *                     priorizar la carga del contenido superior de la página.
+ *
+ *      secondary-css.styl: Este archivo contiene los estilos que no son
+ *                          prioridad para el contenido superior de la página.
+ *                          Este archivo se compila en el archivo index.min.css
+ *                          que se coloca en la etiqueta <link/> justo debajo de
+ *                          donde se cierra la etiqueta <body />.
+ *                          Esto se hace con la finalidad de no retrasar la carga
+ *                          del HTML.
+ *
+ *
  * CONVENCIONES PARA LOS NOMBRES DE LAS CLASES
  *      BEM es una metodología para nombrar y clasificar selectores
  *      CSS de manera que los hacemos más estrictos, transparentes e
@@ -14,13 +34,14 @@
  *         .bloque__elemento{}
  *         .bloque--modificador{}
  *
- * ORDEN DEL CÓDIGO
+ * ORDEN DEL CÓDIGO DEL PROYECTO
  *      1. Variables - Variables de color y sombras.
  *      2. Normalize - Normalizando estilos - zona cero.
  *      3. Elementos sin clase.
  *      4. Utilidades - patrones de diseño genéricos.
  *      5. Componentes – Componentes construidos a partir de objetos
  *         y sus extensiones.
+ *
  *
  **************************************************************************
  *******************************--CONTENIDO--******************************
@@ -30,8 +51,9 @@
  * ========================================================================
  * Variables.............Variables de color sombras.
  *
- * Normalize.............Normalize que contiene el font-family Roboto y
- *                       el tamaño de la fuente.
+ * Normalize.............Import de Normalize en formato .styl, en este se
+ *                       declara el fondo del body y el tamaño general de
+ *                       la fuente.
  *
  *
  * ELEMENTOS SIN CLASES
@@ -59,67 +81,32 @@
  *
  * custom-check..........Estilos que definen la posición y el tamaño de los
  *                       checks personalizados.
- *
- *
- * COMPONENTES - CHECKS PERSONALIZADOS
- * ========================================================================
- * Estilos de cada uno de los tipos de check diseñados, estas clases
- * definen el tipo de apariencia que va a tener cada tipo de checkbox.
- * Cada uno de los  tipos de check se crea en archivos independientes
- * para facilitar la edición y la creación de más estilos.
- *
- *
- * COMPONENTES - KEYFRAMES
- * ========================================================================
- * Archivo con todas las animaciones que utilizan los checks personalizados.
  */
 
-
- /*------------------------------------*\
-     IMPORT GOOGLE FONTS
- \*------------------------------------*/
-@import url("http://fonts.googleapis.com/css?family=Roboto:500,300,300italic,400italic,700,400");
 
 /*------------------------------------*\
     NORMALIZE & VARIABLES
 \*------------------------------------*/
-@import 'tools/variables'
-// @import 'tools/normalize-v3.0.3-ROBOTO'
+@import './tools/variables'
+@import './tools/normalize-v3.0.3-ROBOTO'
 
 /*------------------------------------*\
     ELEMENTOS SIN CLASE
 \*------------------------------------*/
-// input[type="checkbox"]
-// input[type="radio"]
-//     opacity 0
-//     outline none
-//     touch-action none
+input[type="checkbox"]
+input[type="radio"]
+    opacity 0
+    outline none
+    touch-action none
 
-// label
-//     touch-action none
+label
+    touch-action none
 
 /*------------------------------------*\
     COMPONENTES
 \*------------------------------------*/
-// @import 'utilities'
-// @import 'components/header'
-// @import 'components/landing'
-// @import 'components/list'
-// @import 'components/custom-check'
-
-/*---------------------------------------*\
-    COMPONENTES - CHECKS PERSONALIZADOS
-\*---------------------------------------*/
-@import 'components/custom-checks/check-A'
-@import 'components/custom-checks/check-B'
-@import 'components/custom-checks/check-C'
-@import 'components/custom-checks/check-D'
-@import 'components/custom-checks/radio-A'
-@import 'components/custom-checks/radio-B'
-@import 'components/custom-checks/radio-C'
-@import 'components/custom-checks/radio-D'
-
-/*---------------------------------------*\
-    COMPONENTES - KEYFRAMES
-\*---------------------------------------*/
-@import 'components/custom-checks/keyframes'
+@import './tools/utilities'
+@import './header/styles.header'
+@import './landing/styles.landing'
+@import './list/styles.list'
+@import './custom-check/styles.custom-check'

@@ -1,0 +1,22 @@
+mixin listCustomCheck(inputType, type, ripple)
+    ul(class="list")
+        li(class="list__item")
+            label(class="custom-check")
+                input(class="custom-check__checkbox" + " " + inputType, type=type,  checked="true",  name=inputType)
+                span(class="custom-check__checkbox" + " " + inputType + "__background",  data-ripple=ripple)
+                span(class="custom-check__checkbox" + " " + inputType + "__checkbox")
+                span(class="custom-check__text") Item #1
+
+            li(class="list__item")
+                label(class="custom-check")
+                    input(class="custom-check__checkbox" + " " + inputType, type=type,  name=inputType)
+                    span(class="custom-check__checkbox" + " " + inputType + "__background",  data-ripple=ripple)
+                    span(class="custom-check__checkbox" + " " + inputType + "__checkbox")
+                    span(class="custom-check__text") Item #2
+
+            li(class="list__item")
+                label(class="custom-check")
+                    input(class="custom-check__checkbox" + " " + inputType, type=type,  name=inputType)
+                    span(class="custom-check__checkbox" + " " + inputType + "__background",  data-ripple=ripple)
+                    span(class="custom-check__checkbox" + " " + inputType + "__checkbox")
+                    span(class="custom-check__text") Item #3
