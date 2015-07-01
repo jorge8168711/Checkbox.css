@@ -15,7 +15,7 @@
 .radio-D
     &__background //fondo '❍' cuando .custom-check__checkbox esta desmarcado
         background-color white
-        border solid .125em unchecked-color //Var en shadows.styl
+        border solid .125em unchecked-color //Var en variables.styl
         border-radius 50%
         transition all .3s ease-in-out
 
@@ -26,8 +26,8 @@
     &__checkbox //símbolo '●' cuando .custom-check__checkbox esta desmarcado
         background-color unchecked-color
         border-radius 50%
-        transform scale(.6)
+        transform scale(.5)
 
     &:checked + .radio-D__background + .radio-D__checkbox //símbolo '●' cuando .custom-check__checkbox esta marcado
         background-color checked-color
-        animation radio-D .5s ease-in-out 1ms 1 normal forwards
+        transform scale(.6)

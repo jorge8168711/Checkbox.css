@@ -7,7 +7,6 @@ html(lang="es")
         meta(name="description" content="Conjunto de estilos creados con stylus que sirven para agregar estilos personalizados a tus checks.")
         meta(name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1")
 
-        //- Titulo del proyecto
         title Checkbox.styl
 
         //- Fav-icon del sitio
@@ -25,25 +24,31 @@ html(lang="es")
 
         //-Section en el que esta el contenido principal
         section(class="wrapper")
-            //- Título de la sección de checks
+            //- Títulos de las secciones
             h2(class="sections-title") Inputs de tipo checkbox
 
             //-INCLUDE del archivo que contiene los mixins que sirven
                para generar los diferentes tipos de checks
             include tools/mixins.jade
 
-            //-Mixins importados del archivo mixins.jade
+            //-Mixins que generan los custom checks en formato de lista
             +listCustomCheck("check-A", "checkbox", "false")
             +listCustomCheck("check-B", "checkbox", "false")
             +listCustomCheck("check-C", "checkbox", "false")
             +listCustomCheck("check-D", "checkbox", "false")
 
+            //- Títulos de las secciones
             h2(class="sections-title") Inputs de tipo radio
-            //-Mixins importados del archivo mixins.jade
+            //-Mixins que generan los custom checks en formato de lista
             +listCustomCheck("radio-A", "radio", "false")
             +listCustomCheck("radio-B", "radio", "false")
             +listCustomCheck("radio-C", "radio", "true")
-            +listCustomCheck("radio-D", "radio", "true")
+            +listCustomCheck("radio-D", "radio", "false")
+
+            //- Títulos de las secciones
+            h2(class="sections-title") Inputs de tipo switch
+            //-Mixins que generan los custom checks de tipo switch
+            +CustomSwitch("switch-A", "checkbox","true")
 
     //- INCLUDE de los estilos que no son prioridad para la parte superior del sitio.
     link(rel="stylesheet", type="text/css", href="./public/css/style.min.css")

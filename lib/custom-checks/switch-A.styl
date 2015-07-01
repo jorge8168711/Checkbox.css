@@ -1,0 +1,65 @@
+/**
+ * ESTILOS PARA INPUT DE TIPO SWITCH
+ *
+ * CONTENIDO
+ * ==========================================================
+ * switch-A......................Estilos del switch animado A.
+ *        switch-A__background...Barra de color que esta por debajo del botón
+ *                               que se desplaza al activar o desactivar.
+ *
+ *        switch-A__checkbox.....Botón animado que esta encima de la barra de color sobre
+ *                               la que se desplaza este botón.
+ */
+
+/*------------------------------------*\
+    SWITCH-A
+\*------------------------------------*/
+.switch-A
+    margin 1em 0
+    &__text
+        display inline-block
+        margin-right 1.5em
+        padding 0
+        position relative
+
+    &__background //fondo '☐☐☐☐' cuando .custom-check__checkbox esta desmarcado
+        background-color lighten(divider-color, 70%)
+        border-radius 10%
+        box-shadow z-depth-1
+        display inline-block
+        position relative
+        top .15em
+        width 2.5em
+
+        &::before
+        &::after
+            background-color lighten(divider-color, 70%)
+            border-radius 50%
+            content ''
+            height 1.1em
+            position absolute
+            top 0
+            width 1.1em
+
+        &::before
+            left -15%
+
+        &::after
+            right -15%
+
+    &__checkbox //símbolo '❍' cuando .custom-check__checkbox esta desmarcado
+        background-color white
+        border-radius 50%
+        box-shadow z-depth-2 //variable en variables.styl
+        left -15%
+        transform scale(1.2)
+        transition all .3s ease-in-out
+        z-index 1
+
+    &:checked + .switch-A__background > .switch-A__checkbox //símbolo '❍' cuando .custom-check__checkbox esta marcado
+        background-color checked-color
+        left 71%
+
+@media screen and (max-width: 30em)
+    .switch-A__text
+        margin-right 1.1em

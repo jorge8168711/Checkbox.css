@@ -14,14 +14,14 @@
 \*------------------------------------*/
 .check-C
     &__background //fondo '☐' cuando .custom-check__checkbox esta desmarcado
-        background-color unchecked-color //Var en shadows.styl
+        background-color unchecked-color //Var en variables.styl
         border-radius .125em
         transition all .2s ease-in-out
 
     &:checked + .check-C__background //fondo '☐' cuando .custom-check__checkbox esta marcado
         animation bouncing-item .5s ease-in-out 0s 1 normal forwards
-        background-color checked-color //Var en shadows.styl
-        box-shadow z-depth-1 //Var en shadows.styl
+        background-color checked-color //Var en variables.styl
+        box-shadow z-depth-1 //Var en variables.styl
 
     &__checkbox //símbolo '✔' cuando .custom-check__checkbox esta desmarcado
         border solid .125em white

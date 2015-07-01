@@ -5,18 +5,45 @@ mixin listCustomCheck(inputType, type, ripple)
                 input(class="custom-check__checkbox" + " " + inputType, type=type,  checked="true",  name=inputType)
                 span(class="custom-check__checkbox" + " " + inputType + "__background",  data-ripple=ripple)
                 span(class="custom-check__checkbox" + " " + inputType + "__checkbox")
-                span(class="custom-check__text") Item #1
+                span(class="custom-check__text") Item 1
 
             li(class="list__item")
                 label(class="custom-check")
                     input(class="custom-check__checkbox" + " " + inputType, type=type,  name=inputType)
                     span(class="custom-check__checkbox" + " " + inputType + "__background",  data-ripple=ripple)
                     span(class="custom-check__checkbox" + " " + inputType + "__checkbox")
-                    span(class="custom-check__text") Item #2
+                    span(class="custom-check__text") Item 2
 
             li(class="list__item")
                 label(class="custom-check")
                     input(class="custom-check__checkbox" + " " + inputType, type=type,  name=inputType)
                     span(class="custom-check__checkbox" + " " + inputType + "__background",  data-ripple=ripple)
                     span(class="custom-check__checkbox" + " " + inputType + "__checkbox")
-                    span(class="custom-check__text") Item #3
+                    span(class="custom-check__text") Item 3
+
+mixin CustomCheck(inputType, type, ripple, itemText)
+    label(class="custom-check")
+        input(class="custom-check__checkbox" + " " + inputType, type=type,  name=inputType)
+        span(class="custom-check__checkbox" + " " + inputType + "__background",  data-ripple=ripple)
+        span(class="custom-check__checkbox" + " " + inputType + "__checkbox")
+        span(class="custom-check__text")=itemText
+
+mixin CustomSwitch(inputType, type, ripple)
+    div(class="generic-container")
+        label(class="custom-check" + " " + inputType)
+            span(class="custom-check__text" + " " + inputType + "__text") Activar algo 1
+            input(class="custom-check__checkbox" + " " + inputType, type=type,  name=inputType)
+            span(class="custom-check__checkbox" + " " + inputType + "__background")
+                span(class="custom-check__checkbox" + " " + inputType + "__checkbox",  data-ripple=ripple)
+
+        label(class="custom-check" + " " + inputType)
+            span(class="custom-check__text" + " " + inputType + "__text") Activar algo 2
+            input(class="custom-check__checkbox" + " " + inputType, type=type,  name=inputType)
+            span(class="custom-check__checkbox" + " " + inputType + "__background")
+                span(class="custom-check__checkbox" + " " + inputType + "__checkbox",  data-ripple=ripple)
+
+        label(class="custom-check" + " " + inputType)
+            span(class="custom-check__text" + " " + inputType + "__text") Activar algo 3
+            input(class="custom-check__checkbox" + " " + inputType, type=type,  name=inputType)
+            span(class="custom-check__checkbox" + " " + inputType + "__background")
+                span(class="custom-check__checkbox" + " " + inputType + "__checkbox",  data-ripple=ripple)
