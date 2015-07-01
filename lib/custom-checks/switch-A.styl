@@ -15,7 +15,7 @@
     SWITCH-A
 \*------------------------------------*/
 .switch-A
-    margin 1em 0
+    margin 1em 0 //modifica el margin por defecto de los elementos custom-check
     &__text
         display inline-block
         margin-right 1.5em
@@ -23,17 +23,17 @@
         position relative
 
     &__background //fondo '☐☐☐☐' cuando .custom-check__checkbox esta desmarcado
-        background-color lighten(divider-color, 70%)
+        background-color lighten(divider-color, 70%) //variable en variables.styl
         border-radius 10%
-        box-shadow z-depth-1
+        box-shadow z-depth-1 //variable en variables.styl
         display inline-block
         position relative
         top .15em
         width 2.5em
 
-        &::before
-        &::after
-            background-color lighten(divider-color, 70%)
+        &::before //Elementos que agregan los cículos al final del background
+        &::after  //para completar la forma redondeada del fondo del switch.
+            background-color lighten(divider-color, 70%) //variable en variables.styl
             border-radius 50%
             content ''
             height 1.1em
@@ -57,7 +57,7 @@
         z-index 1
 
     &:checked + .switch-A__background > .switch-A__checkbox //símbolo '❍' cuando .custom-check__checkbox esta marcado
-        background-color checked-color
+        background-color checked-color //variable en variables.styl
         left 71%
 
 @media screen and (max-width: 30em)

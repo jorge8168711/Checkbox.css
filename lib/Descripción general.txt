@@ -1,0 +1,46 @@
+/**
+ **************************************************************************
+ **************--DESCRIPCIÓN DE LA ESTRUCTURA DEL PROYECTO--***************
+ **************************************************************************
+ *
+ * Los estilos del proyecto se dividen en dos partes que son las siguientes:
+ *
+ *      primary-css.styl: Este archivo contiene los estilos y los imports
+ *                        principales que sirven para OPTIMIZAR LA ENTREGA DE
+ *                        CSS según google, basado en el análisis de
+ *                        PageSpeed-Insights.
+ *                        Los estilos contenidos en este archivo se compilan
+ *                        y se colocan en la etiqueta HEAD dentro de una
+ *                        etiqueta style, esto se hace con la finalidad de
+ *                        priorizar la carga del contenido superior de la página.
+ *
+ *      index.styl: Este archivo contiene los estilos que no son
+ *                  prioridad para el contenido superior de la página.
+ *                  Este archivo se compila en el archivo index.min.css
+ *                  que se coloca en la etiqueta <link/> justo debajo de
+ *                  donde se cierra la etiqueta <body/>.
+ *                  Esto se hace con la finalidad de no retrasar la carga
+ *                  del HTML.
+ *      NOTA:
+ *      Estos archivos únicamente contienen los imports y la descripción de
+ *      todos los componentes que estructuran el proyecto.
+ *
+ * CONVENCIONES PARA LOS NOMBRES DE LAS CLASES
+ *      BEM es una metodología para nombrar y clasificar selectores
+ *      CSS de manera que los hacemos más estrictos, transparentes e
+ *      informativos.
+ *
+ *          La convención de nombre sigue este patrón:
+ *
+ *         .bloque{}
+ *         .bloque__elemento{}
+ *         .bloque--modificador{}
+ *
+ * ORDEN DEL CÓDIGO DEL PROYECTO
+ *      1. Variables - Variables de color y sombras.
+ *      2. Normalize - Normalizando estilos - zona cero.
+ *      3. Elementos sin clase.
+ *      4. Utilidades - patrones de diseño genéricos.
+ *      5. Componentes – Componentes construidos a partir de objetos
+ *         y sus extensiones.
+ */

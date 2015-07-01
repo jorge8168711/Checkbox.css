@@ -15,13 +15,13 @@
 .radio-C
     &__background //fondo '❍' cuando .custom-check__checkbox esta desmarcado
         background-color white
-        border solid .125em checked-color //Var en variables.styl
+        border solid .125em checked-color //variable en variables.styl
         border-radius 50%
         transition all .3s ease-in
 
     &:checked + .radio-C__background //fondo '❍' cuando .custom-check__checkbox esta marcado
-        background-color checked-color
-        box-shadow z-depth-1
+        background-color checked-color //variable en variables.styl
+        box-shadow z-depth-1 //variable en variables.styl
 
     &__checkbox //símbolo '●' cuando .custom-check__checkbox esta desmarcado
         border-radius 50%
@@ -29,6 +29,6 @@
         transition all .3s ease-in
 
     &:checked + .radio-C__background + .radio-C__checkbox //símbolo '●' cuando .custom-check__checkbox esta marcado
-        animation bouncing-item .5s ease-in-out .2s 1 normal forwards
-        background-color checked-color
+        animation bouncing-item .5s ease-in-out .2s 1 normal forwards //animación en keyframes.styl
+        background-color checked-color //variable en variables.styl
         transform scale(1)

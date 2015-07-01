@@ -1,0 +1,68 @@
+/**
+ **************************************************************************
+ *******************************--CONTENIDO--******************************
+ **************************************************************************
+ *
+ * NORMALIZE & VARIABLES
+ * ========================================================================
+ * Variables.............Variables de color sombras.
+ *
+ * Normalize.............Import de Normalize en formato .styl, en este se
+ *                       declara el fondo del body y el tamaño general de
+ *                       la fuente.
+ *
+ *
+ * ELEMENTOS SIN CLASES
+ * ========================================================================
+ * input.................Pone los elementos con la opacidad en 0 para que no
+ *                       se vean.
+ *                       Elimina el outline.
+ *                       Elimina el recuadro que aparece al dar clic en
+ *                       dispositivos móviles.
+ *
+ * label.................Elimina el recuadro que aparece al dar clic en
+ *                       dispositivos móviles.
+ *
+ *
+ * COMPONENTES
+ * ========================================================================
+ * utilities.............Estilos genéricos para los elementos.
+ *
+ * header................Estilos del header y sus partes.
+ *
+ * landing...............Pequeño landing que contiene el nombre del proyecto.
+ *
+ * list..................Estilos para los Ul y los LI que contienen los
+ *                       elementos custom-check.
+ *
+ * custom-check..........Estilos que definen la posición y el tamaño de los
+ *                       checks personalizados.
+ */
+
+
+/*------------------------------------*\
+    NORMALIZE & VARIABLES
+\*------------------------------------*/
+@import '../tools/variables'
+@import '../tools/normalize-v3.0.3-ROBOTO'
+
+/*------------------------------------*\
+    ELEMENTOS SIN CLASE
+\*------------------------------------*/
+input[type="checkbox"]
+input[type="radio"]
+    opacity 0
+    outline none
+    touch-action none
+
+label
+    touch-action none
+
+/*------------------------------------*\
+    COMPONENTES
+\*------------------------------------*/
+@import '../tools/utilities'
+@import '../header/styles.header'
+@import '../landing/styles.landing'
+@import '../list/styles.list'
+@import '../custom-check/styles.custom-check'

@@ -13,7 +13,7 @@ html(lang="es")
         link(rel="shortcut icon" href="./public/images/favicon.ico")
 
         //- INCLUDE de etiqueta style que contiene los estilos de la parte superior del sitio.
-        include main-css.jade
+        include ./primary-css/primary-css.jade
 
     body
         //- INCLUDE del componente header y sus partes
@@ -51,4 +51,4 @@ html(lang="es")
             +CustomSwitch("switch-A", "checkbox","true")
 
     //- INCLUDE de los estilos que no son prioridad para la parte superior del sitio.
-    link(rel="stylesheet", type="text/css", href="./public/css/style.min.css")
+    link(rel="stylesheet", type="text/css", href="./public/css/index.min.css")
