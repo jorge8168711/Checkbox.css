@@ -21,14 +21,14 @@ mixin listCustomCheck(inputType, type, ripple)
                     span(class="custom-check__checkbox" + " " + inputType + "__checkbox")
                     span(class="custom-check__text") Item 3
 
-mixin CustomCheck(inputType, type, ripple, itemText)
+mixin customCheck(inputType, type, ripple, itemText)
     label(class="custom-check")
         input(class="custom-check__checkbox" + " " + inputType, type=type,  name=inputType)
         span(class="custom-check__checkbox" + " " + inputType + "__background",  data-ripple=ripple)
         span(class="custom-check__checkbox" + " " + inputType + "__checkbox")
         span(class="custom-check__text")=itemText
 
-mixin CustomSwitch(inputType, type, ripple)
+mixin customSwitch(inputType, type, ripple)
     div(class="generic-container")
         label(class="custom-check" + " " + inputType)
             span(class="custom-check__text" + " " + inputType + "__text") Opción 1
