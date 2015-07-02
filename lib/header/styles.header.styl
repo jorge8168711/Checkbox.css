@@ -23,16 +23,16 @@
 /*------------------------------------*\
     FONT-FACE
 \*------------------------------------*/
-@font-face {
-    font-family: 'icomoon';
-    src:url('./public/fonts/icomoon.eot?-77glzp');
-    src:url('./public/fonts/icomoon.eot?#iefix-77glzp') format('embedded-opentype'),
-        url('./public/fonts/icomoon.ttf?-77glzp') format('truetype'),
-        url('./public/fonts/icomoon.woff?-77glzp') format('woff'),
-        url('./public/fonts/icomoon.svg?-77glzp#icomoon') format('svg');
-    font-weight: normal;
-    font-style: normal;
-}
+// @font-face {
+//     font-family: 'icomoon';
+//     src:url('./public/fonts/icomoon.eot?-77glzp');
+//     src:url('./public/fonts/icomoon.eot?#iefix-77glzp') format('embedded-opentype'),
+//         url('./public/fonts/icomoon.ttf?-77glzp') format('truetype'),
+//         url('./public/fonts/icomoon.woff?-77glzp') format('woff'),
+//         url('./public/fonts/icomoon.svg?-77glzp#icomoon') format('svg');
+//     font-weight: normal;
+//     font-style: normal;
+// }
 
 /*------------------------------------*\
     HEADER
@@ -54,12 +54,13 @@
     LOGO
 \*------------------------------------*/
 .logo
+    animation bouncing-item 1s ease-in-out .5s 1 normal forwards
     display inline-block
     height 132px
     margin 1em 0 0 0
     position relative
-    z-index 3
     width 132px
+    z-index 3
 
     &__image
         max-width 100%
@@ -90,6 +91,7 @@
     font-size 1.3rem
     font-weight 100
     height 32px
+    overflow hidden
     position absolute
     text-align center
     top 80px
@@ -105,7 +107,7 @@
         position relative
         text-align center
         text-decoration none
-        transition all .1s ease
+        transition all .3s ease-in
         width 5.5em
 
         &:nth-child(2)
@@ -115,25 +117,25 @@
             opacity 0
 
         &:hover
-            font-weight normal
-            transform scale(1.03)
+            background-color rgba(white, .2)
+            box-shadow z-depth-1
 
-        &:nth-child(1)::after
-        &:nth-child(3)::after
-            -moz-osx-font-smoothing grayscale
-            -webkit-font-smoothing antialiased
-            content '\e600'
-            font-family 'icomoon'
-            font-size 1rem
-            position absolute
+        // &:nth-child(1)::after
+        // &:nth-child(3)::after
+        //     -moz-osx-font-smoothing grayscale
+        //     -webkit-font-smoothing antialiased
+        //     content '\e600'
+        //     font-family 'icomoon'
+        //     font-size 1rem
+        //     position absolute
 
-        &:nth-child(1)::after
-            left 1.2em
-            top 0
+        // &:nth-child(1)::after
+        //     left 1.2em
+        //     top 0
 
-        &:nth-child(3)::after
-            right .2em
-            top 0
+        // &:nth-child(3)::after
+        //     right .2em
+        //     top 0
 
 @media screen and (max-width: 30em)
     .nav

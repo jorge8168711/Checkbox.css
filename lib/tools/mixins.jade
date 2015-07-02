@@ -31,19 +31,19 @@ mixin CustomCheck(inputType, type, ripple, itemText)
 mixin CustomSwitch(inputType, type, ripple)
     div(class="generic-container")
         label(class="custom-check" + " " + inputType)
-            span(class="custom-check__text" + " " + inputType + "__text") Activar algo 1
+            span(class="custom-check__text" + " " + inputType + "__text") Opción 1
+            input(class="custom-check__checkbox" + " " + inputType, type=type,  name=inputType, checked="true")
+            span(class="custom-check__checkbox" + " " + inputType + "__background")
+                span(class="custom-check__checkbox" + " " + inputType + "__checkbox",  data-ripple=ripple)
+
+        label(class="custom-check" + " " + inputType)
+            span(class="custom-check__text" + " " + inputType + "__text") Opción 2
             input(class="custom-check__checkbox" + " " + inputType, type=type,  name=inputType)
             span(class="custom-check__checkbox" + " " + inputType + "__background")
                 span(class="custom-check__checkbox" + " " + inputType + "__checkbox",  data-ripple=ripple)
 
         label(class="custom-check" + " " + inputType)
-            span(class="custom-check__text" + " " + inputType + "__text") Activar algo 2
-            input(class="custom-check__checkbox" + " " + inputType, type=type,  name=inputType)
-            span(class="custom-check__checkbox" + " " + inputType + "__background")
-                span(class="custom-check__checkbox" + " " + inputType + "__checkbox",  data-ripple=ripple)
-
-        label(class="custom-check" + " " + inputType)
-            span(class="custom-check__text" + " " + inputType + "__text") Activar algo 3
+            span(class="custom-check__text" + " " + inputType + "__text") Opción 3
             input(class="custom-check__checkbox" + " " + inputType, type=type,  name=inputType)
             span(class="custom-check__checkbox" + " " + inputType + "__background")
                 span(class="custom-check__checkbox" + " " + inputType + "__checkbox",  data-ripple=ripple)

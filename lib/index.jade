@@ -4,10 +4,10 @@ html(lang="es")
     head
         //-Meta Tags
         meta(charset="UTF-8")
-        meta(name="description" content="Conjunto de estilos creados con stylus que sirven para agregar estilos personalizados a tus checks.")
+        meta(name="description" content="Conjunto de elementos de tipo checkbox creados con únicamente css.")
         meta(name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1")
 
-        title Checkbox.styl
+        title Checkbox.css
 
         //- Fav-icon del sitio
         link(rel="shortcut icon" href="./public/images/favicon.ico")
@@ -40,14 +40,15 @@ html(lang="es")
             //- Títulos de las secciones
             h2(class="sections-title") Inputs de tipo radio
             //-Mixins que generan los custom checks en formato de lista
-            +listCustomCheck("radio-A", "radio", "false")
-            +listCustomCheck("radio-B", "radio", "false")
+            +listCustomCheck("radio-A", "radio", "true")
+            +listCustomCheck("radio-B", "radio", "true")
             +listCustomCheck("radio-C", "radio", "true")
             +listCustomCheck("radio-D", "radio", "false")
 
             //- Títulos de las secciones
             h2(class="sections-title") Inputs de tipo switch
             //-Mixins que generan los custom checks de tipo switch
+            +CustomSwitch("switch-A", "checkbox","true")
             +CustomSwitch("switch-A", "checkbox","true")
 
     //- INCLUDE de los estilos que no son prioridad para la parte superior del sitio.
