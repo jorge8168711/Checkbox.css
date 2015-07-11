@@ -3,18 +3,18 @@
  *
  * CONTENIDO
  * ==========================================================
- * switch-A......................Estilos del switch animado A.
- *        switch-A__background...Barra de color que esta por debajo del botón
+ * switch-B......................Estilos del switch animado A.
+ *        switch-B__background...Barra de color que esta por debajo del botón
  *                               que se desplaza al activar o desactivar.
  *
- *        switch-A__checkbox.....Botón animado que esta encima de la barra de color sobre
+ *        switch-B__checkbox.....Botón animado que esta encima de la barra de color sobre
  *                               la que se desplaza este botón.
  */
 
 /*------------------------------------*\
-    SWITCH-A
+    SWITCH-B
 \*------------------------------------*/
-.switch-A
+.switch-B
     margin 1em 0 //modifica el margin por defecto de los elementos custom-check
 
     &__text
@@ -28,29 +28,18 @@
         position relative
 
     &__background //fondo '☐☐☐☐' cuando .custom-check__checkbox esta desmarcado
-        background-color lighten(divider-color, 70%) //variable en variables.styl
-        border-radius 10%
-        box-shadow z-depth-1 //variable en variables.styl
         display inline-block
         position relative
         top .15em
         width 2.5em
 
-        &::before //Elementos que agregan los cículos al final del background
-        &::after  //para completar la forma redondeada del fondo del switch.
-            background-color lighten(divider-color, 70%) //variable en variables.styl
-            border-radius 50%
-            content ''
-            height 1.1em
-            position absolute
-            top 0
-            width 1.1em
-
         &::before
-            left -15%
-
-        &::after
-            right -15%
+            background-color divider-color
+            content ''
+            height .125em
+            position absolute
+            top 0.55em
+            width 100%
 
     &__checkbox //símbolo '❍' cuando .custom-check__checkbox esta desmarcado
         background-color white
@@ -61,10 +50,10 @@
         transition all .3s ease-in-out
         z-index 1
 
-    &:checked + .switch-A__background > .switch-A__checkbox //símbolo '❍' cuando .custom-check__checkbox esta marcado
+    &:checked + .switch-B__background > .switch-B__checkbox //símbolo '❍' cuando .custom-check__checkbox esta marcado
         background-color checked-color //variable en variables.styl
         left 71%
 
 @media screen and (max-width: 30em)
-    .switch-A__text
+    .switch-B__text
         margin-right 1.1em
