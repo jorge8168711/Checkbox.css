@@ -2,53 +2,54 @@
 html(lang="es")
 
     head
-        //-Meta Tags
+        //-META TAGS
         meta(charset="UTF-8")
-        meta(name="description" content="Conjunto de elementos de tipo checkbox creados con únicamente css.")
+        meta(name="description" content="Conjunto de checks personalizados, creados con únicamente css.")
         meta(name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1")
 
         title Checkbox.css
-
-        //- Fav-icon del sitio
         link(rel="shortcut icon" href="./public/images/favicon.ico")
 
-        //- INCLUDE de etiqueta style que contiene los estilos de la parte superior del sitio.
-        include ./primary-css/primary-css.jade
+        style
+            //-INCLUDE que contiene los estilos de la parte superior del sitio.
+            include ./primary-css/primary-css.css
 
     body
-        //- INCLUDE del componente header y sus partes
+        //-INCLUDE DEL COMPONENTE HEADER Y SUS PARTES
         include header/template.header.jade
 
-        //- INCLUDE del pequeño landing y sus partes
+        //-INCLUDE DEL PEQUEÑO LANDING Y SUS PARTES
         include landing/template.landing.jade
 
-        //-Section en el que esta el contenido principal
+        //-SECTION CONTENEDOR DE LOS EEJEMPLOS
         section(class="wrapper")
-            //- Título de la sección
-            h2(class="sections-title") Inputs de tipo checkbox
+            //-TÍTULO DE LA SECCIÓN
+            h2(class="sections-title") Tipo checkbox
 
-            //-INCLUDE del archivo que contiene los mixins que sirven
-               para generar los diferentes tipos de checks
+            //-INCLUDE DEL ARCHIVO QUE CONTIENE LOS MIXINS QUE SIRVEN
+            //-PARA GENERAR LOS DIFERENTES TIPOS DE CHECKS
             include tools/mixins.jade
 
-            //-Mixins que generan los custom checks en formato de lista
+            //-MIXINS QUE GENERAN LOS CUSTOM CHECKS EN FORMATO DE LISTA
             +listCustomCheck("check-A", "checkbox", "false")
             +listCustomCheck("check-B", "checkbox", "false")
             +listCustomCheck("check-C", "checkbox", "false")
             +listCustomCheck("check-D", "checkbox", "false")
 
-            //- Título de la sección
-            h2(class="sections-title") Inputs de tipo radio
-            //-Mixins que generan los custom checks en formato de lista
+            //-TÍTULO DE LA SECCIÓN
+            h2(class="sections-title") Tipo radio
+            
+            //-MIXINS QUE GENERAN LOS CUSTOM CHECKS EN FORMATO DE LISTA
             +listCustomCheck("radio-A", "radio", "true")
             +listCustomCheck("radio-B", "radio", "true")
             +listCustomCheck("radio-C", "radio", "true")
             +listCustomCheck("radio-D", "radio", "false")
 
-            //- Título de la sección
-            h2(class="sections-title") Inputs de tipo switch
-            //-Mixins que generan los custom checks de tipo switch
+            //-TÍTULO DE LA SECCIÓN
+            h2(class="sections-title") Tipo switch
+            
+            //-MIXINS QUE GENERAN LOS CUSTOM CHECKS DE TIPO SWITCH
             +customSwitch("switch-A", "checkbox","true")
 
-    //- INCLUDE de los estilos que no son prioridad para la parte superior del sitio.
+    //-INCLUDE DE LOS ESTILOS QUE NO SON PRIORIDAD PARA LA PARTE SUPERIOR DEL SITIO.
     link(rel="stylesheet", type="text/css", href="./public/css/index.min.css")
