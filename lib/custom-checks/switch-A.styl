@@ -28,37 +28,20 @@
 
     &__background //fondo '☐☐☐☐' cuando .custom-check__checkbox esta desmarcado
         background-color lighten(divider-color, 70%) //variable en variables.styl
-        border-radius 10%
+        border-radius 999px
         box-shadow z-depth-1 //variable en variables.styl
         display inline-block
         position relative
         top .15em
-        width 2.5em
-
-        &::before //Elementos que agregan los cículos al final del background
-        &::after  //para completar la forma redondeada del fondo del switch.
-            background-color lighten(divider-color, 70%) //variable en variables.styl
-            border-radius 50%
-            content ''
-            height 1.1em
-            position absolute
-            top 0
-            width 1.1em
-
-        &::before
-            left -15%
-
-        &::after
-            right -15%
+        width 2.6em
 
     &__checkbox //símbolo '❍' cuando .custom-check__checkbox esta desmarcado
-        background-color white
+        background-color lighten(divider-color, 88%) //variable en variables.styl
         border-radius 50%
         box-shadow z-depth-2 //variable en variables.styl
         left -15%
-        transform scale(1.2)
+        transform scale(1.3)
         transition all .3s ease-in-out
-        z-index 1
 
     &:checked + .switch-A__background > .switch-A__checkbox //símbolo '❍' cuando .custom-check__checkbox esta marcado
         background-color checked-color //variable en variables.styl
