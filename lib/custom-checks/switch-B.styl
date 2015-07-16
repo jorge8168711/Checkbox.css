@@ -33,7 +33,7 @@
         width 2.5em
 
         &::before
-            background-color divider-color
+            background-color lighten(divider-color, 20%)
             content ''
             height .125em
             position absolute
@@ -41,7 +41,7 @@
             width 100%
 
     &__checkbox //símbolo '❍' cuando .custom-check__checkbox esta desmarcado
-        background-color white
+        background-color light-gray
         border-radius 50%
         box-shadow z-depth-2 //variable en variables.styl
         left -15%
