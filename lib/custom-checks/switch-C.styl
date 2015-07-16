@@ -27,27 +27,30 @@
         position relative
 
     &__background //fondo '☐☐☐☐' cuando .custom-check__checkbox esta desmarcado
-        background-color lighten(divider-color, 70%) //variable en variables.styl
-        border border-1//variable en variables.styl
+        background-color lighten(divider-color, 40%) //variable en variables.styl
+        border solid 0.0625em rgba(250,250,250, 0)//variable en variables.styl
         border-radius 999px
         display inline-block
         position relative
         top .15em
         transform scale(1.4)
+        transition all .3s ease-in-out
         width 2.2em
 
     &__checkbox //símbolo '❍' cuando .custom-check__checkbox esta desmarcado
-        background-color lighten(divider-color, 88%) //variable en variables.styl
-        border border-1 //variable en variables.styl
+        background-color light-gray //variable en variables.styl
         border-radius 50%
+        box-shadow z-depth-1 //variable en en variables.styl
         left -2%
-        top -1px
+        top -0.0625em
         transform scale(.75)
         transition all .3s ease-in-out
 
+    &:checked + .switch-C__background
+        background-color lighten(checked-color, 70%)
+
     &:checked + .switch-C__background > .switch-C__checkbox //símbolo '❍' cuando .custom-check__checkbox esta marcado
         background-color checked-color //variable en variables.styl
-        border none
         left 50%
 
 @media screen and (max-width: 30em)

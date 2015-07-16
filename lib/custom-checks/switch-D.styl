@@ -3,18 +3,18 @@
  *
  * CONTENIDO
  * ==========================================================
- * switch-A......................Estilos del switch animado A.
- *        switch-A__background...Barra de color que esta por debajo del botón
+ * switch-D......................Estilos del switch animado A.
+ *        switch-D__background...Barra de color que esta por debajo del botón
  *                               que se desplaza al activar o desactivar.
  *
- *        switch-A__checkbox.....Botón animado que esta encima de la barra de color sobre
+ *        switch-D__checkbox.....Botón animado que esta encima de la barra de color sobre
  *                               la que se desplaza este botón.
  */
 
 /*------------------------------------*\
-    SWITCH-A
+    SWITCH-D
 \*------------------------------------*/
-.switch-A
+.switch-D
     margin 1em 0 //modifica el margin por defecto de los elementos custom-check
 
     &__checkbox
@@ -28,25 +28,42 @@
 
     &__background //fondo '☐☐☐☐' cuando .custom-check__checkbox esta desmarcado
         background-color lighten(divider-color, 40%) //variable en variables.styl
-        border-radius 999px
-        box-shadow z-depth-1 //variable en variables.styl
+        border-radius .125em
         display inline-block
         position relative
         top .15em
-        width 2.6em
+        transform scale(1.2)
+        transition all .3s ease-in-out
+        width 2.5em
 
     &__checkbox //símbolo '❍' cuando .custom-check__checkbox esta desmarcado
         background-color light-gray //variable en variables.styl
-        border-radius 50%
-        box-shadow z-depth-2 //variable en variables.styl
-        left -15%
-        transform scale(1.3)
+        border-radius .125em
+        box-shadow z-depth-1 //variable en en variables.styl
+        left -2%
+        position relative
         transition all .3s ease-in-out
 
-    &:checked + .switch-A__background > .switch-A__checkbox //símbolo '❍' cuando .custom-check__checkbox esta marcado
+        &::after
+            color rgba(white, .8)
+            content ''
+            font-size 60%
+            font-weight bold
+            left 20%
+            position absolute
+            top 20%
+            transition all .3s ease
+
+    &:checked + .switch-D__background
+        background-color lighten(checked-color, 70%)
+
+    &:checked + .switch-D__background > .switch-D__checkbox //símbolo '❍' cuando .custom-check__checkbox esta marcado
         background-color checked-color //variable en variables.styl
-        left 71%
+        left 54%
+
+        &::after
+            content 'On'
 
 @media screen and (max-width: 30em)
-    .switch-A__text
+    .switch-D__text
         margin-right 1.1em
