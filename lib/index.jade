@@ -21,14 +21,14 @@ html(lang="es")
         //-INCLUDE DEL PEQUEÑO LANDING Y SUS PARTES
         include landing/template.landing.jade
 
-        //-SECTION CONTENEDOR DE LOS EEJEMPLOS
-        section(class="wrapper")
-            //-TÍTULO DE LA SECCIÓN
-            h2(class="sections-title") Tipo checkbox
-
+        //-CONTENEDOR PRINCIPAL DE LOS EJEMPLOS
+        main(class="wrapper")
             //-INCLUDE DEL ARCHIVO QUE CONTIENE LOS MIXINS QUE SIRVEN
             //-PARA GENERAR LOS DIFERENTES TIPOS DE CHECKS
             include tools/mixins.jade
+            
+            //-TÍTULO DE LA SECCIÓN
+            h2(class="sections-title") Checkbox
 
             //-MIXINS QUE GENERAN LOS CUSTOM CHECKS EN FORMATO DE LISTA
             +listCustomCheck("check-A", "checkbox", "false")
@@ -37,7 +37,7 @@ html(lang="es")
             +listCustomCheck("check-D", "checkbox", "false")
 
             //-TÍTULO DE LA SECCIÓN
-            h2(class="sections-title") Tipo radio
+            h2(class="sections-title") Radio
             
             //-MIXINS QUE GENERAN LOS CUSTOM CHECKS EN FORMATO DE LISTA
             +listCustomCheck("radio-A", "radio", "true")
@@ -46,13 +46,16 @@ html(lang="es")
             +listCustomCheck("radio-D", "radio", "false")
 
             //-TÍTULO DE LA SECCIÓN
-            h2(class="sections-title") Tipo switch
+            h2(class="sections-title") Switch
             
             //-MIXINS QUE GENERAN LOS CUSTOM CHECKS DE TIPO SWITCH
             +customSwitch("switch-A", "checkbox","true")
             +customSwitch("switch-B", "checkbox","true")
             +customSwitch("switch-C", "checkbox","true")
             +customSwitch("switch-D", "checkbox","true")
-
-    //-INCLUDE DE LOS ESTILOS QUE NO SON PRIORIDAD PARA LA PARTE SUPERIOR DEL SITIO.
-    link(rel="stylesheet", type="text/css", href="./public/css/index.min.css")
+                
+        //-INCLUDE DEL FOOTER DEL SITIO
+        include ./footer/footer.jade
+    
+//-INCLUDE DE LOS ESTILOS QUE NO SON PRIORIDAD PARA LA PARTE SUPERIOR DEL SITIO.
+link(rel="stylesheet", type="text/css", href="./public/css/index.min.css")
