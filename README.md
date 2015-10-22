@@ -1,5 +1,5 @@
 # Checkbox.css
 
--Conjunto de checkoxes creados con CSS Compatibles con diferentes navegadores.
+- Conjunto de checkoxes creados con únicamente CSS Compatibles con diferentes navegadores.
 
-Descripción pendiente.
+![Example screen 1](public/images/screen1.png)
