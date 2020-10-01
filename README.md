@@ -1,4 +1,5 @@
-# Checkbox.css
+# Type-Checkbox.css
+<h3>Easily understandable</h3>
 
 - Conjunto de checkoxes creados con únicamente CSS Compatibles con diferentes navegadores.
 
